@@ -31,7 +31,7 @@ const Conclusion = () => {
       >
         {/* Title */}
         <motion.div variants={item} className="text-center mb-8">
-          <div className="inline-flex items-center rounded-full border border-[#8B4513]/15 bg-[#f7f0e2]/80 px-4 py-2 text-xs md:text-sm font-semibold uppercase tracking-[0.28em] text-[#8B4513] mb-4">
+          <div className="inline-flex items-center rounded-full border border-[#8B4513]/15 bg-[#f7f0e2]/80 px-4 py-2 text-sm md:text-base font-semibold uppercase tracking-[0.28em] text-[#8B4513] mb-4">
             {title}
           </div>
         </motion.div>
@@ -46,12 +46,12 @@ const Conclusion = () => {
         {/* Summary & Bridge Grid */}
         <div className="grid md:grid-cols-2 gap-6">
           <motion.div variants={item} className="glass-panel-light p-8 rounded-[2rem]">
-            <p className="text-lg md:text-xl text-[#2C1E16] leading-relaxed font-medium text-justify">
+            <p className="text-xl md:text-2xl text-[#2C1E16] leading-relaxed font-medium text-justify">
               {summary}
             </p>
           </motion.div>
           <motion.div variants={item} className="glass-panel-light p-8 rounded-[2rem] bg-white/40">
-            <p className="text-lg md:text-xl text-[#5C4033] leading-relaxed text-justify">
+            <p className="text-xl md:text-2xl text-[#5C4033] leading-relaxed text-justify">
               {bridge}
             </p>
           </motion.div>
@@ -61,7 +61,7 @@ const Conclusion = () => {
         <motion.div variants={item} className="glass-panel-light p-8 md:p-12 rounded-[2rem]">
           <div className="space-y-6">
             {quotes.map((quote, idx) => (
-              <p key={idx} className="text-lg md:text-xl text-[#2C1E16] font-medium border-l-4 border-[#4A5D23] pl-6 py-2 text-justify">
+              <p key={idx} className="text-xl md:text-2xl text-[#2C1E16] font-medium border-l-4 border-[#4A5D23] pl-6 py-2 text-justify">
                 {quote}
               </p>
             ))}

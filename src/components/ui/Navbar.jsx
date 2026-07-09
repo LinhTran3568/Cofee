@@ -57,13 +57,13 @@ const Navbar = () => {
             onClick={() => scrollTo('hero')}
             className="text-left"
           >
-            <div className="text-[11px] uppercase tracking-[0.35em] text-[#8B4513]/80 font-semibold">Presentation</div>
-            <div className="text-[#2C1E16] font-serif font-bold text-lg md:text-xl tracking-tight hover:text-[#4A5D23] transition-colors">
+            <div className="text-xs uppercase tracking-[0.35em] text-[#8B4513]/80 font-semibold">Presentation</div>
+            <div className="text-[#2C1E16] font-serif font-bold text-xl md:text-[1.35rem] tracking-tight whitespace-nowrap hover:text-[#4A5D23] transition-colors">
               Chuỗi Cà Phê VN
             </div>
           </button>
           <div className="hidden lg:block w-px h-10 bg-[#8B4513]/15" />
-          <div className="hidden lg:block text-sm text-[#5C4033] font-medium">
+          <div className="hidden lg:block text-base text-[#5C4033] font-medium whitespace-nowrap">
             Từ nông trại đến ly cà phê
           </div>
         </div>
@@ -73,7 +73,7 @@ const Navbar = () => {
             <button
               key={s.id}
               onClick={() => scrollTo(s.id)}
-              className={`relative px-4 py-2 text-sm font-semibold rounded-full transition-all duration-300 ${
+              className={`relative px-4 py-2 text-[15px] md:text-base font-semibold rounded-full transition-all duration-300 ${
                 active === s.id
                   ? 'text-white'
                   : 'text-[#2C1E16] hover:text-[#4A5D23]'
@@ -86,7 +86,7 @@ const Navbar = () => {
                   transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                 />
               )}
-              <span className="relative z-10">{s.label}</span>
+              <span className="relative z-10 whitespace-nowrap">{s.label}</span>
             </button>
           ))}
         </div>

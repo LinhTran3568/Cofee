@@ -30,7 +30,7 @@ const StateRole = () => {
           <h2 className="text-5xl md:text-7xl font-bold text-[#2C1E16] mb-8 tracking-tight font-serif">{title}</h2>
           <div className="glass-panel-light p-8 rounded-2xl border-l-8 border-l-[#8B4513] max-w-4xl space-y-4">
             <p className="text-xl md:text-2xl text-[#2C1E16] font-medium leading-relaxed italic text-justify">{subtitle}</p>
-            <p className="text-lg text-[#5C4033] leading-relaxed text-justify">{context}</p>
+            <p className="text-xl md:text-2xl text-[#5C4033] leading-relaxed text-justify">{context}</p>
           </div>
         </motion.div>
         <motion.div
@@ -51,13 +51,13 @@ const StateRole = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="max-w-7xl w-full mb-12 glass-panel-light p-8 rounded-3xl"
       >
-        <h3 className="text-2xl font-bold text-[#2C1E16] mb-4">{foundationTitle}</h3>
-        <p className="text-lg text-[#5C4033] leading-relaxed mb-6 text-justify">{foundationLead}</p>
+        <h3 className="text-3xl font-bold text-[#2C1E16] mb-4">{foundationTitle}</h3>
+        <p className="text-xl md:text-2xl text-[#5C4033] leading-relaxed mb-6 text-justify">{foundationLead}</p>
         <div className="grid gap-6 md:grid-cols-2">
           {foundation.map((item, index) => (
             <div key={item} className="rounded-2xl bg-white/55 border border-white/50 p-6 md:p-8 h-full">
-              <div className="text-base md:text-lg font-bold uppercase tracking-[0.2em] text-[#8B4513] mb-3">0{index + 1}</div>
-              <p className="text-lg md:text-xl text-[#4A3219] leading-relaxed">{item}</p>
+              <div className="text-lg md:text-xl font-bold uppercase tracking-[0.2em] text-[#8B4513] mb-3">0{index + 1}</div>
+              <p className="text-xl md:text-2xl text-[#4A3219] leading-relaxed">{item}</p>
             </div>
           ))}
         </div>
@@ -70,13 +70,13 @@ const StateRole = () => {
         transition={{ duration: 0.8, delay: 0.25 }}
         className="max-w-7xl w-full mb-12 glass-panel-light p-8 rounded-3xl"
       >
-        <h3 className="text-2xl font-bold text-[#2C1E16] mb-4">{redistributionTitle}</h3>
-        <p className="text-lg text-[#5C4033] leading-relaxed mb-6 text-justify">{redistributionTheory}</p>
+        <h3 className="text-3xl font-bold text-[#2C1E16] mb-4">{redistributionTitle}</h3>
+        <p className="text-xl md:text-2xl text-[#5C4033] leading-relaxed mb-6 text-justify">{redistributionTheory}</p>
         <div className="space-y-4">
           {redistributionItems.map((item, index) => (
             <div key={item} className="rounded-2xl bg-white/55 border border-white/50 p-6">
-              <div className="text-base md:text-lg font-bold uppercase tracking-[0.2em] text-[#8B4513] mb-3">0{index + 1}</div>
-              <p className="text-lg md:text-xl text-[#4A3219] leading-relaxed text-justify">{item}</p>
+              <div className="text-lg md:text-xl font-bold uppercase tracking-[0.2em] text-[#8B4513] mb-3">0{index + 1}</div>
+              <p className="text-xl md:text-2xl text-[#4A3219] leading-relaxed text-justify">{item}</p>
             </div>
           ))}
         </div>
@@ -87,7 +87,7 @@ const StateRole = () => {
         <div className="flex-1 space-y-8 glass-panel-light p-8 md:p-12 rounded-3xl">
           <div className="border-b border-[#4A5D23]/30 pb-6 mb-8">
             <h3 className="text-3xl font-bold text-[#4A5D23] mb-4">{preventive.title}</h3>
-            <p className="text-lg text-[#5C4033] font-medium italic">{preventive.desc}</p>
+            <p className="text-xl md:text-2xl text-[#5C4033] font-medium italic">{preventive.desc}</p>
           </div>
           {preventive.items.map((item, index) => (
             <motion.div
@@ -118,14 +118,14 @@ const StateRole = () => {
           <div className="border-b border-[#8B4513]/30 pb-6 mb-8 relative z-10">
             <h3 className="text-3xl font-bold text-[#8B4513]">{resolution.title}</h3>
           </div>
-          <p className="text-lg md:text-xl text-[#2C1E16] font-medium leading-relaxed text-justify relative z-10">
+          <p className="text-xl md:text-2xl text-[#2C1E16] font-medium leading-relaxed text-justify relative z-10">
             {resolution.desc}
           </p>
           <div className="mt-8 space-y-4 relative z-10">
             {resolution.actions.map((action, index) => (
               <div key={action} className="flex gap-4 items-start rounded-2xl border border-[#8B4513]/10 bg-white/45 p-4">
                 <span className="text-[#8B4513] text-xl font-bold">0{index + 1}</span>
-                <p className="text-lg md:text-xl text-[#2C1E16] leading-relaxed">{action}</p>
+                <p className="text-xl md:text-2xl text-[#2C1E16] leading-relaxed">{action}</p>
               </div>
             ))}
           </div>

@@ -16,7 +16,7 @@ const ValueChain = () => {
           className="flex-1 glass-panel-light p-10 rounded-3xl"
         >
           <h2 className="text-5xl md:text-7xl font-bold text-[#2C1E16] mb-8 tracking-tight font-serif">{title}</h2>
-          <p className="text-xl md:text-2xl text-[#5C4033] font-medium leading-relaxed">
+          <p className="text-2xl md:text-3xl text-[#5C4033] font-medium leading-relaxed">
             {subtitle}
           </p>
         </motion.div>
@@ -46,11 +46,11 @@ const ValueChain = () => {
                 <div>
                   <span className="text-5xl font-bold text-[#4A5D23] mb-4 block">{step.percent}%</span>
                   <h3 className="text-2xl font-bold text-[#2C1E16] mb-2">{step.name}</h3>
-                  <p className="text-[#8B4513] text-base uppercase tracking-widest mb-4 font-bold">{step.role}</p>
+                  <p className="text-[#8B4513] text-lg uppercase tracking-widest mb-4 font-bold">{step.role}</p>
                 </div>
                 <div className="border-t border-[#8B4513]/20 pt-4 mt-4 space-y-3">
-                  <p className="text-lg md:text-xl text-[#5C4033] font-medium">{step.effort}</p>
-                  <p className="text-lg text-[#2C1E16] leading-relaxed">{step.note}</p>
+                  <p className="text-xl md:text-2xl text-[#5C4033] font-medium">{step.effort}</p>
+                  <p className="text-xl md:text-2xl text-[#2C1E16] leading-relaxed">{step.note}</p>
                 </div>
               </div>
             </motion.div>
@@ -65,7 +65,7 @@ const ValueChain = () => {
         transition={{ duration: 0.9, delay: 0.5 }}
         className="max-w-5xl mt-12 glass-panel-light p-8 rounded-2xl"
       >
-        <p className="text-lg md:text-xl text-[#2C1E16] leading-relaxed font-medium text-justify">
+        <p className="text-xl md:text-2xl text-[#2C1E16] leading-relaxed font-medium text-justify">
           {commentary}
         </p>
       </motion.div>
@@ -77,7 +77,7 @@ const ValueChain = () => {
         transition={{ duration: 1, delay: 0.8 }}
         className="max-w-4xl mt-16 glass-panel-light p-8 rounded-2xl border-l-8 border-l-[#8B4513]"
       >
-        <p className="text-lg md:text-xl text-[#2C1E16] leading-relaxed font-medium text-justify">
+        <p className="text-xl md:text-2xl text-[#2C1E16] leading-relaxed font-medium text-justify">
           "{update2024}"
         </p>
       </motion.div>
@@ -89,7 +89,7 @@ const ValueChain = () => {
         transition={{ duration: 0.9, delay: 1 }}
         className="max-w-5xl mt-10 glass-panel-light p-8 rounded-2xl"
       >
-        <p className="text-lg md:text-xl text-[#5C4033] leading-relaxed font-medium text-justify">
+        <p className="text-xl md:text-2xl text-[#5C4033] leading-relaxed font-medium text-justify">
           {ending}
         </p>
       </motion.div>
