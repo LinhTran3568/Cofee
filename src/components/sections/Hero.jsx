@@ -8,9 +8,9 @@ const Hero = () => {
   return (
     <motion.section 
       className="min-h-screen flex flex-col items-center justify-center px-4 py-24 md:px-8 relative z-10"
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -50 }}
+      initial={{ opacity: 0, y: 50, scale: 0.95 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      exit={{ opacity: 0, y: -50, scale: 0.95 }}
       transition={{ duration: 1.5, ease: "easeOut" }}
     >
       <div className="hero-glass-panel p-10 md:p-16 lg:p-24 rounded-3xl text-center z-10 max-w-5xl mx-auto space-y-8 md:space-y-10">

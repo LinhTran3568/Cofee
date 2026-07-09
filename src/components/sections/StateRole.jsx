@@ -22,9 +22,9 @@ const StateRole = () => {
       <div className="flex flex-col lg:flex-row gap-12 mb-16 items-start max-w-7xl mx-auto w-full">
         <motion.div 
           className="flex-1 text-center"
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
+          initial={{ y: 50, opacity: 0, scale: 0.9 }}
+          whileInView={{ y: 0, opacity: 1, scale: 1 }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 1 }}
         >
           <h2 className="text-5xl md:text-7xl font-bold text-[#2C1E16] mb-8 tracking-tight font-serif">{title}</h2>
@@ -34,9 +34,9 @@ const StateRole = () => {
           </div>
         </motion.div>
         <motion.div
-          initial={{ x: 50, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          viewport={{ once: true }}
+          initial={{ x: 50, opacity: 0, scale: 0.95 }}
+          whileInView={{ x: 0, opacity: 1, scale: 1 }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 1, delay: 0.3 }}
           className="lg:w-80 h-64 lg:h-80 rounded-3xl overflow-hidden shadow-xl flex-shrink-0"
         >
@@ -47,7 +47,7 @@ const StateRole = () => {
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: false, amount: 0.2 }}
         transition={{ duration: 0.8, delay: 0.2 }}
         className="max-w-7xl w-full mb-12 glass-panel-light p-8 rounded-3xl text-center"
       >
@@ -66,7 +66,7 @@ const StateRole = () => {
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: false, amount: 0.2 }}
         transition={{ duration: 0.8, delay: 0.25 }}
         className="max-w-7xl w-full mb-12 glass-panel-light p-8 rounded-3xl text-center"
       >
@@ -94,7 +94,7 @@ const StateRole = () => {
               key={index}
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.2 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               className="group"
             >
@@ -112,7 +112,7 @@ const StateRole = () => {
           className="flex-1 glass-panel-light p-8 md:p-12 rounded-3xl flex flex-col relative overflow-hidden text-center"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
           <div className="border-b border-[#8B4513]/30 pb-6 mb-8 relative z-10">

@@ -27,7 +27,7 @@ const Conclusion = () => {
         variants={container}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={{ once: false, amount: 0.2 }}
       >
         {/* Title */}
         <motion.div variants={item} className="text-center mb-8">

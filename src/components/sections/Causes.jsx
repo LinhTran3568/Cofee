@@ -10,9 +10,9 @@ const Causes = () => {
   return (
     <section className="min-h-screen py-32 px-8 lg:px-24 relative z-10 flex flex-col justify-center items-center text-center">
       <motion.div
-        initial={{ y: 40, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: true }}
+        initial={{ y: 40, opacity: 0, scale: 0.95 }}
+        whileInView={{ y: 0, opacity: 1, scale: 1 }}
+        viewport={{ once: false, amount: 0.2 }}
         transition={{ duration: 0.8 }}
         className="glass-panel-light p-8 rounded-2xl max-w-7xl w-full mb-12 text-center"
       >
@@ -28,9 +28,9 @@ const Causes = () => {
           {dimensions.map((dim, idx) => (
             <motion.div
               key={dim.title}
-              initial={{ x: -50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              viewport={{ once: true }}
+              initial={{ x: -50, opacity: 0, scale: 0.95 }}
+              whileInView={{ x: 0, opacity: 1, scale: 1 }}
+              viewport={{ once: false, amount: 0.2 }}
               transition={{ duration: 1, delay: idx * 0.2 }}
               className="glass-panel-light p-8 rounded-2xl text-center"
             >
@@ -41,9 +41,9 @@ const Causes = () => {
         </div>
 
         <motion.div
-          initial={{ x: 50, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          viewport={{ once: true }}
+          initial={{ x: 50, opacity: 0, scale: 0.95 }}
+          whileInView={{ x: 0, opacity: 1, scale: 1 }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 1, delay: 0.4 }}
           className="glass-panel-light p-8 rounded-2xl text-center"
         >
@@ -68,7 +68,7 @@ const Causes = () => {
           className="flex-1 max-w-3xl text-center"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 1 }}
         >
           <h2 className="text-5xl md:text-7xl font-bold text-[#2C1E16] mb-8 tracking-tight font-serif">{title}</h2>
@@ -77,9 +77,9 @@ const Causes = () => {
           </div>
         </motion.div>
         <motion.div
-          initial={{ x: 50, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          viewport={{ once: true }}
+          initial={{ x: 50, opacity: 0, scale: 0.95 }}
+          whileInView={{ x: 0, opacity: 1, scale: 1 }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 1, delay: 0.3 }}
           className="flex-1 h-72 rounded-3xl overflow-hidden shadow-xl"
         >
@@ -93,7 +93,7 @@ const Causes = () => {
             key={index} 
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 1, delay: index * 0.15 }}
             className="p-10 group relative overflow-hidden glass-panel-light rounded-3xl hover:shadow-2xl transition-all duration-300 text-center"
           >

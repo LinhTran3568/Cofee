@@ -10,12 +10,12 @@ const Story = () => {
       className="min-h-screen relative z-10 max-w-7xl mx-auto py-20 px-4 md:px-8 space-y-10 text-center"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      viewport={{ once: true, margin: "-20%" }}
+      viewport={{ once: false, amount: 0.2 }}
       transition={{ duration: 1.5 }}
     >
       <motion.div
-        initial={{ y: 40, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
+        initial={{ y: 40, opacity: 0, scale: 0.95 }}
+        whileInView={{ y: 0, opacity: 1, scale: 1 }}
         transition={{ duration: 0.9 }}
         className="glass-panel-clear rounded-[2rem] p-8 md:p-10 lg:p-12"
       >
@@ -39,8 +39,8 @@ const Story = () => {
       <div className="flex flex-col lg:flex-row gap-12">
         <div className="flex-1 flex flex-col justify-center group">
         <motion.div 
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
+          initial={{ y: 50, opacity: 0, scale: 0.9 }}
+          whileInView={{ y: 0, opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
           className="glass-panel-clear p-8 md:p-12 rounded-3xl h-full flex flex-col text-center"
         >
@@ -57,8 +57,8 @@ const Story = () => {
 
         <div className="flex-1 flex flex-col justify-center group">
         <motion.div 
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
+          initial={{ y: 50, opacity: 0, scale: 0.9 }}
+          whileInView={{ y: 0, opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.4 }}
           className="glass-panel-clear p-8 md:p-12 rounded-3xl h-full flex flex-col text-center"
         >

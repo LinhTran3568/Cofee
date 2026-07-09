@@ -19,9 +19,9 @@ const Concept = () => {
   return (
     <section className="min-h-screen py-32 px-8 lg:px-24 relative z-10 flex flex-col justify-center items-center text-center">
       <motion.div 
-        initial={{ y: 50, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: true }}
+        initial={{ y: 50, opacity: 0, scale: 0.9 }}
+        whileInView={{ y: 0, opacity: 1, scale: 1 }}
+        viewport={{ once: false, amount: 0.2 }}
         transition={{ duration: 1 }}
         className="max-w-5xl mb-16 mx-auto text-center"
       >
@@ -45,9 +45,9 @@ const Concept = () => {
         {actors.map((actor, idx) => (
           <motion.div
             key={actor.subject}
-            initial={{ y: 40, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
+            initial={{ y: 40, opacity: 0, scale: 0.95 }}
+            whileInView={{ y: 0, opacity: 1, scale: 1 }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.8, delay: idx * 0.1 }}
             className="glass-panel-light p-6 rounded-2xl text-center"
           >
@@ -59,9 +59,9 @@ const Concept = () => {
       </div>
 
       <motion.div
-        initial={{ y: 40, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: true }}
+        initial={{ y: 40, opacity: 0, scale: 0.95 }}
+        whileInView={{ y: 0, opacity: 1, scale: 1 }}
+        viewport={{ once: false, amount: 0.2 }}
         transition={{ duration: 0.8 }}
         className="glass-panel-light p-8 md:p-10 rounded-[2rem] max-w-7xl w-full mb-12 text-center"
       >
@@ -95,9 +95,9 @@ const Concept = () => {
       </motion.div>
 
       <motion.div 
-        initial={{ y: 50, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: true }}
+        initial={{ y: 50, opacity: 0, scale: 0.9 }}
+        whileInView={{ y: 0, opacity: 1, scale: 1 }}
+        viewport={{ once: false, amount: 0.2 }}
         transition={{ duration: 1, delay: 0.2 }}
         className="glass-panel-light p-8 rounded-2xl max-w-7xl w-full text-center"
       >

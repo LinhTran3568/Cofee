@@ -9,9 +9,9 @@ const ValueChain = () => {
     <section className="min-h-screen py-32 px-8 lg:px-24 relative z-10 flex flex-col justify-center">
       <div className="flex flex-col lg:flex-row gap-12 mb-16 items-start max-w-7xl mx-auto w-full">
         <motion.div 
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
+          initial={{ y: 50, opacity: 0, scale: 0.9 }}
+          whileInView={{ y: 0, opacity: 1, scale: 1 }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 1 }}
           className="flex-1 glass-panel-light p-10 rounded-3xl"
         >
@@ -21,9 +21,9 @@ const ValueChain = () => {
           </p>
         </motion.div>
         <motion.div
-          initial={{ x: 50, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          viewport={{ once: true }}
+          initial={{ x: 50, opacity: 0, scale: 0.95 }}
+          whileInView={{ x: 0, opacity: 1, scale: 1 }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 1, delay: 0.3 }}
           className="flex-1 h-72 rounded-3xl overflow-hidden shadow-xl"
         >
@@ -36,9 +36,9 @@ const ValueChain = () => {
           {steps.map((step, index) => (
             <motion.div 
               key={step.id} 
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
+              initial={{ y: 50, opacity: 0, scale: 0.9 }}
+              whileInView={{ y: 0, opacity: 1, scale: 1 }}
+              viewport={{ once: false, amount: 0.2 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               className="flex flex-col relative glass-panel-light p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300"
             >
@@ -59,9 +59,9 @@ const ValueChain = () => {
       </div>
 
       <motion.div
-        initial={{ y: 40, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: true }}
+        initial={{ y: 40, opacity: 0, scale: 0.95 }}
+        whileInView={{ y: 0, opacity: 1, scale: 1 }}
+        viewport={{ once: false, amount: 0.2 }}
         transition={{ duration: 0.9, delay: 0.5 }}
         className="max-w-5xl mt-12 glass-panel-light p-8 rounded-2xl"
       >
@@ -71,9 +71,9 @@ const ValueChain = () => {
       </motion.div>
 
       <motion.div
-        initial={{ y: 50, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: true }}
+        initial={{ y: 50, opacity: 0, scale: 0.9 }}
+        whileInView={{ y: 0, opacity: 1, scale: 1 }}
+        viewport={{ once: false, amount: 0.2 }}
         transition={{ duration: 1, delay: 0.8 }}
         className="max-w-4xl mt-16 glass-panel-light p-8 rounded-2xl border-l-8 border-l-[#8B4513]"
       >
@@ -83,9 +83,9 @@ const ValueChain = () => {
       </motion.div>
 
       <motion.div
-        initial={{ y: 40, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: true }}
+        initial={{ y: 40, opacity: 0, scale: 0.95 }}
+        whileInView={{ y: 0, opacity: 1, scale: 1 }}
+        viewport={{ once: false, amount: 0.2 }}
         transition={{ duration: 0.9, delay: 1 }}
         className="max-w-5xl mt-10 glass-panel-light p-8 rounded-2xl"
       >
