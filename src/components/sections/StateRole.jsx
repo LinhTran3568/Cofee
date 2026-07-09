@@ -82,50 +82,52 @@ const StateRole = () => {
         </div>
       </motion.div>
 
-      <div className="flex flex-col lg:flex-row gap-12 max-w-7xl w-full">
+      <div className="flex flex-col gap-12 max-w-7xl w-full">
         {/* Preventive Measures */}
-        <div className="flex-1 space-y-8 glass-panel-light p-8 md:p-12 rounded-3xl text-center">
+        <div className="w-full space-y-8 glass-panel-light p-8 md:p-12 rounded-3xl text-center">
           <div className="border-b border-[#4A5D23]/30 pb-6 mb-8">
-            <h3 className="text-3xl font-bold text-[#4A5D23] mb-4">{preventive.title}</h3>
-            <p className="text-xl md:text-2xl text-[#5C4033] font-medium italic">{preventive.desc}</p>
+            <h3 className="text-3xl md:text-4xl font-bold text-[#4A5D23] mb-4">{preventive.title}</h3>
+            <p className="text-xl md:text-2xl text-[#5C4033] font-medium italic max-w-4xl mx-auto">{preventive.desc}</p>
           </div>
-          {preventive.items.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: false, amount: 0.2 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="group"
-            >
-              <div className="flex items-center justify-center gap-4 mb-2">
-                <span className="text-[#8B4513] text-2xl font-bold">0{index + 1}.</span>
-                <h4 className="text-2xl font-bold text-[#2C1E16]">{item.title}</h4>
-              </div>
-              <p className="text-xl text-[#2C1E16] font-medium leading-relaxed">{item.desc}</p>
-            </motion.div>
-          ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {preventive.items.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: false, amount: 0.2 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                className="group flex flex-col items-center bg-white/40 p-8 rounded-2xl border border-[#4A5D23]/10 hover:-translate-y-2 transition-transform duration-300"
+              >
+                <div className="flex flex-col items-center gap-4 mb-4">
+                  <span className="text-[#8B4513] text-4xl font-bold">0{index + 1}.</span>
+                  <h4 className="text-2xl font-bold text-[#2C1E16]">{item.title}</h4>
+                </div>
+                <p className="text-lg md:text-xl text-[#5C4033] font-medium leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
 
         {/* Resolution Measure */}
         <motion.div 
-          className="flex-1 glass-panel-light p-8 md:p-12 rounded-3xl flex flex-col relative overflow-hidden text-center"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          className="w-full glass-panel-light p-8 md:p-12 rounded-3xl flex flex-col relative overflow-hidden text-center"
+          initial={{ opacity: 0, y: 50, scale: 0.95 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: false, amount: 0.2 }}
-          transition={{ duration: 1, delay: 0.5 }}
+          transition={{ duration: 1, delay: 0.2 }}
         >
           <div className="border-b border-[#8B4513]/30 pb-6 mb-8 relative z-10">
-            <h3 className="text-3xl font-bold text-[#8B4513]">{resolution.title}</h3>
+            <h3 className="text-3xl md:text-4xl font-bold text-[#8B4513] mb-4">{resolution.title}</h3>
+            <p className="text-xl md:text-2xl text-[#2C1E16] font-medium leading-relaxed max-w-4xl mx-auto relative z-10">
+              {resolution.desc}
+            </p>
           </div>
-          <p className="text-xl md:text-2xl text-[#2C1E16] font-medium leading-relaxed relative z-10">
-            {resolution.desc}
-          </p>
-          <div className="mt-8 space-y-4 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
             {resolution.actions.map((action, index) => (
-              <div key={action} className="flex gap-4 items-start rounded-2xl border border-[#8B4513]/10 bg-white/45 p-4 text-left">
-                <span className="text-[#8B4513] text-xl font-bold">0{index + 1}</span>
-                <p className="text-xl md:text-2xl text-[#2C1E16] leading-relaxed">{action}</p>
+              <div key={action} className="flex flex-col items-center rounded-2xl border border-[#8B4513]/10 bg-white/40 p-8 text-center hover:-translate-y-2 transition-transform duration-300">
+                <span className="text-[#8B4513] text-4xl font-bold mb-4">0{index + 1}</span>
+                <p className="text-lg md:text-xl text-[#2C1E16] font-medium leading-relaxed">{action}</p>
               </div>
             ))}
           </div>
