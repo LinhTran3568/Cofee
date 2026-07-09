@@ -45,23 +45,23 @@ const Conclusion = () => {
 
         {/* Summary & Bridge Grid */}
         <div className="grid md:grid-cols-2 gap-6">
-          <motion.div variants={item} className="glass-panel-light p-8 rounded-[2rem]">
-            <p className="text-xl md:text-2xl text-[#2C1E16] leading-relaxed font-medium text-justify">
+          <motion.div variants={item} className="glass-panel-light p-8 rounded-[2rem] text-center">
+            <p className="text-xl md:text-2xl text-[#2C1E16] leading-relaxed font-medium">
               {summary}
             </p>
           </motion.div>
-          <motion.div variants={item} className="glass-panel-light p-8 rounded-[2rem] bg-white/40">
-            <p className="text-xl md:text-2xl text-[#5C4033] leading-relaxed text-justify">
+          <motion.div variants={item} className="glass-panel-light p-8 rounded-[2rem] bg-white/40 text-center">
+            <p className="text-xl md:text-2xl text-[#5C4033] leading-relaxed">
               {bridge}
             </p>
           </motion.div>
         </div>
 
         {/* Quotes */}
-        <motion.div variants={item} className="glass-panel-light p-8 md:p-12 rounded-[2rem]">
+        <motion.div variants={item} className="glass-panel-light p-8 md:p-12 rounded-[2rem] text-center">
           <div className="space-y-6">
             {quotes.map((quote, idx) => (
-              <p key={idx} className="text-xl md:text-2xl text-[#2C1E16] font-medium border-l-4 border-[#4A5D23] pl-6 py-2 text-justify">
+              <p key={idx} className="text-xl md:text-2xl text-[#2C1E16] font-medium border-l-4 border-[#4A5D23] pl-6 py-2 text-center">
                 {quote}
               </p>
             ))}

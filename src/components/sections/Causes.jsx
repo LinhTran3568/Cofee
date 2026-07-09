@@ -8,18 +8,18 @@ const Causes = () => {
   const { title, subtitle, items } = presentationData.causes;
 
   return (
-    <section className="min-h-screen py-32 px-8 lg:px-24 relative z-10 flex flex-col justify-center">
+    <section className="min-h-screen py-32 px-8 lg:px-24 relative z-10 flex flex-col justify-center items-center text-center">
       <motion.div
         initial={{ y: 40, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="glass-panel-light p-8 rounded-2xl max-w-7xl w-full mb-12"
+        className="glass-panel-light p-8 rounded-2xl max-w-7xl w-full mb-12 text-center"
       >
         <h2 className="text-5xl md:text-7xl font-bold text-[#2C1E16] mb-4 tracking-tight font-serif">{deepDiveTitle}</h2>
         <p className="text-2xl md:text-3xl text-[#4A5D23] font-semibold mb-6">{deepDiveSubtitle}</p>
         <p className="text-2xl font-bold text-[#8B4513] mb-4">{deepDiveIntroTitle}</p>
-        <p className="text-xl md:text-2xl text-[#2C1E16] leading-relaxed text-justify mb-4">{deepDiveIntroTheory}</p>
+        <p className="text-xl md:text-2xl text-[#2C1E16] leading-relaxed mb-4">{deepDiveIntroTheory}</p>
         <p className="text-xl md:text-2xl text-[#5C4033] font-medium">{deepDiveIntroApply}</p>
       </motion.div>
 
@@ -32,10 +32,10 @@ const Causes = () => {
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: idx * 0.2 }}
-              className="glass-panel-light p-8 rounded-2xl"
+              className="glass-panel-light p-8 rounded-2xl text-center"
             >
               <h3 className="text-3xl font-bold text-[#4A5D23] mb-4 border-b border-[#4A5D23]/20 pb-4">{dim.title}</h3>
-              <p className="text-xl md:text-2xl text-[#2C1E16] font-medium leading-relaxed text-justify">{dim.desc}</p>
+              <p className="text-xl md:text-2xl text-[#2C1E16] font-medium leading-relaxed">{dim.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -45,10 +45,10 @@ const Causes = () => {
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="glass-panel-light p-8 rounded-2xl"
+          className="glass-panel-light p-8 rounded-2xl text-center"
         >
           <h3 className="text-3xl font-bold text-[#8B4513] mb-6 border-b border-[#8B4513]/20 pb-4">2. Sự thống nhất và mâu thuẫn</h3>
-          <div className="space-y-6 text-justify">
+          <div className="space-y-6">
             <p className="text-xl md:text-2xl text-[#5C4033] leading-relaxed">{relations.theory}</p>
             <p className="text-xl md:text-2xl text-[#2C1E16] font-medium leading-relaxed">
               <span className="text-[#4A5D23] font-bold block mb-2">Tính thống nhất:</span>
@@ -65,7 +65,7 @@ const Causes = () => {
 
       <div className="flex flex-col lg:flex-row gap-12 mb-16 items-start max-w-7xl mx-auto w-full">
         <motion.div 
-          className="flex-1 max-w-3xl"
+          className="flex-1 max-w-3xl text-center"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -73,7 +73,7 @@ const Causes = () => {
         >
           <h2 className="text-5xl md:text-7xl font-bold text-[#2C1E16] mb-8 tracking-tight font-serif">{title}</h2>
           <div className="glass-panel-light p-8 rounded-2xl border-l-8 border-l-[#4A5D23]">
-            <p className="text-xl md:text-2xl text-[#2C1E16] font-medium leading-relaxed italic text-justify">{subtitle}</p>
+            <p className="text-xl md:text-2xl text-[#2C1E16] font-medium leading-relaxed italic">{subtitle}</p>
           </div>
         </motion.div>
         <motion.div
@@ -95,13 +95,13 @@ const Causes = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: index * 0.15 }}
-            className="p-10 group relative overflow-hidden glass-panel-light rounded-3xl hover:shadow-2xl transition-all duration-300"
+            className="p-10 group relative overflow-hidden glass-panel-light rounded-3xl hover:shadow-2xl transition-all duration-300 text-center"
           >
             <div className="absolute top-0 right-0 p-8 text-8xl font-serif font-bold text-[#4A5D23]/10 group-hover:text-[#8B4513]/10 transition-colors duration-500 pointer-events-none">
               0{index + 1}
             </div>
             <h3 className="text-3xl font-bold text-[#8B4513] mb-4 relative z-10">{item.title}</h3>
-            <p className="text-xl md:text-2xl text-[#2C1E16] font-medium leading-relaxed relative z-10 text-justify">{item.desc}</p>
+            <p className="text-xl md:text-2xl text-[#2C1E16] font-medium leading-relaxed relative z-10">{item.desc}</p>
           </motion.div>
         ))}
       </div>
