@@ -63,20 +63,31 @@ const Concept = () => {
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="glass-panel-light p-8 rounded-2xl max-w-7xl w-full mb-12 text-center"
+        className="glass-panel-light p-8 md:p-10 rounded-[2rem] max-w-7xl w-full mb-12 text-center"
       >
-        <h3 className="text-3xl font-bold text-[#8B4513] mb-4">{nature.title}</h3>
-        <p className="text-xl md:text-2xl italic text-[#2C1E16] mb-5">{nature.quote}</p>
-        <div className="space-y-4 mb-6">
-          {nature.paragraphs.map((paragraph) => (
-            <p key={paragraph} className="text-xl md:text-2xl text-[#2C1E16] leading-relaxed">
-              {paragraph}
-            </p>
-          ))}
+        <div className="max-w-5xl mx-auto">
+          <h3 className="text-3xl md:text-4xl font-bold text-[#8B4513] mb-6">{nature.title}</h3>
+          <p className="text-2xl md:text-3xl italic text-[#2C1E16] mb-8 leading-relaxed">
+            {nature.quote}
+          </p>
+          <div className="inline-flex items-center rounded-full border border-[#8B4513]/15 bg-white/60 px-6 py-3 text-[#8B4513] font-bold text-xl md:text-2xl shadow-sm mb-8">
+            {nature.paragraphs[0].replace(/^1\.\s*/, '')}
+          </div>
+          <div className="space-y-4 mb-10">
+            {nature.paragraphs.slice(1).map((paragraph) => (
+              <p key={paragraph} className="text-xl md:text-2xl text-[#2C1E16] leading-relaxed">
+                {paragraph}
+              </p>
+            ))}
+          </div>
         </div>
-        <div className="grid gap-4 md:grid-cols-3">
+
+        <div className="grid gap-5 md:grid-cols-3">
           {nature.items.map((item) => (
-            <div key={item} className="rounded-2xl bg-white/55 border border-white/50 p-5 text-xl md:text-2xl text-[#4A3219] leading-relaxed text-center">
+            <div
+              key={item}
+              className="rounded-[1.75rem] bg-white/65 border border-white/60 p-6 md:p-7 text-xl md:text-2xl text-[#4A3219] leading-relaxed text-center shadow-[0_18px_40px_rgba(60,42,24,0.08)]"
+            >
               {item}
             </div>
           ))}
