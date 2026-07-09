@@ -56,8 +56,8 @@ const StateRole = () => {
         <div className="grid gap-4 md:grid-cols-3">
           {foundation.map((item, index) => (
             <div key={item} className="rounded-2xl bg-white/55 border border-white/50 p-6">
-              <div className="text-sm font-bold uppercase tracking-[0.2em] text-[#8B4513] mb-3">0{index + 1}</div>
-              <p className="text-[#4A3219] leading-relaxed">{item}</p>
+              <div className="text-base md:text-lg font-bold uppercase tracking-[0.2em] text-[#8B4513] mb-3">0{index + 1}</div>
+              <p className="text-lg md:text-xl text-[#4A3219] leading-relaxed">{item}</p>
             </div>
           ))}
         </div>
@@ -75,8 +75,8 @@ const StateRole = () => {
         <div className="space-y-4">
           {redistributionItems.map((item, index) => (
             <div key={item} className="rounded-2xl bg-white/55 border border-white/50 p-6">
-              <div className="text-sm font-bold uppercase tracking-[0.2em] text-[#8B4513] mb-3">0{index + 1}</div>
-              <p className="text-[#4A3219] leading-relaxed text-justify">{item}</p>
+              <div className="text-base md:text-lg font-bold uppercase tracking-[0.2em] text-[#8B4513] mb-3">0{index + 1}</div>
+              <p className="text-lg md:text-xl text-[#4A3219] leading-relaxed text-justify">{item}</p>
             </div>
           ))}
         </div>
@@ -99,10 +99,10 @@ const StateRole = () => {
               className="group"
             >
               <div className="flex items-center gap-4 mb-2">
-                <span className="text-[#8B4513] text-xl font-bold">0{index + 1}.</span>
-                <h4 className="text-xl font-bold text-[#2C1E16]">{item.title}</h4>
+                <span className="text-[#8B4513] text-2xl font-bold">0{index + 1}.</span>
+                <h4 className="text-2xl font-bold text-[#2C1E16]">{item.title}</h4>
               </div>
-              <p className="text-lg text-[#2C1E16] font-medium leading-relaxed pl-10 text-justify">{item.desc}</p>
+              <p className="text-xl text-[#2C1E16] font-medium leading-relaxed pl-10 text-justify">{item.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -124,8 +124,8 @@ const StateRole = () => {
           <div className="mt-8 space-y-4 relative z-10">
             {resolution.actions.map((action, index) => (
               <div key={action} className="flex gap-4 items-start rounded-2xl border border-[#8B4513]/10 bg-white/45 p-4">
-                <span className="text-[#8B4513] font-bold">0{index + 1}</span>
-                <p className="text-[#2C1E16] leading-relaxed">{action}</p>
+                <span className="text-[#8B4513] text-xl font-bold">0{index + 1}</span>
+                <p className="text-lg md:text-xl text-[#2C1E16] leading-relaxed">{action}</p>
               </div>
             ))}
           </div>

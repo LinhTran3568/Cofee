@@ -17,10 +17,10 @@ const Causes = () => {
         className="glass-panel-light p-8 rounded-2xl max-w-7xl w-full mb-12"
       >
         <h2 className="text-5xl md:text-7xl font-bold text-[#2C1E16] mb-4 tracking-tight font-serif">{deepDiveTitle}</h2>
-        <p className="text-lg text-[#4A5D23] font-semibold mb-6">{deepDiveSubtitle}</p>
-        <p className="text-xl font-bold text-[#8B4513] mb-4">{deepDiveIntroTitle}</p>
-        <p className="text-lg text-[#2C1E16] leading-relaxed text-justify mb-4">{deepDiveIntroTheory}</p>
-        <p className="text-lg text-[#5C4033] font-medium">{deepDiveIntroApply}</p>
+        <p className="text-xl text-[#4A5D23] font-semibold mb-6">{deepDiveSubtitle}</p>
+        <p className="text-2xl font-bold text-[#8B4513] mb-4">{deepDiveIntroTitle}</p>
+        <p className="text-lg md:text-xl text-[#2C1E16] leading-relaxed text-justify mb-4">{deepDiveIntroTheory}</p>
+        <p className="text-lg md:text-xl text-[#5C4033] font-medium">{deepDiveIntroApply}</p>
       </motion.div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl w-full mb-12">
@@ -35,7 +35,7 @@ const Causes = () => {
               className="glass-panel-light p-8 rounded-2xl"
             >
               <h3 className="text-2xl font-bold text-[#4A5D23] mb-4 border-b border-[#4A5D23]/20 pb-4">{dim.title}</h3>
-              <p className="text-lg text-[#2C1E16] font-medium leading-relaxed text-justify">{dim.desc}</p>
+              <p className="text-lg md:text-xl text-[#2C1E16] font-medium leading-relaxed text-justify">{dim.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -49,13 +49,13 @@ const Causes = () => {
         >
           <h3 className="text-2xl font-bold text-[#8B4513] mb-6 border-b border-[#8B4513]/20 pb-4">2. Sự thống nhất và mâu thuẫn</h3>
           <div className="space-y-6 text-justify">
-            <p className="text-lg text-[#5C4033] leading-relaxed">{relations.theory}</p>
-            <p className="text-lg text-[#2C1E16] font-medium leading-relaxed">
+            <p className="text-lg md:text-xl text-[#5C4033] leading-relaxed">{relations.theory}</p>
+            <p className="text-lg md:text-xl text-[#2C1E16] font-medium leading-relaxed">
               <span className="text-[#4A5D23] font-bold block mb-2">Tính thống nhất:</span>
               {relations.unity}
             </p>
             <div className="h-[1px] w-full bg-[#2C1E16]/10"></div>
-            <p className="text-lg text-[#2C1E16] font-medium leading-relaxed">
+            <p className="text-lg md:text-xl text-[#2C1E16] font-medium leading-relaxed">
               <span className="text-[#8B4513] font-bold block mb-2">Tính mâu thuẫn:</span>
               {relations.conflict}
             </p>
@@ -73,7 +73,7 @@ const Causes = () => {
         >
           <h2 className="text-5xl md:text-7xl font-bold text-[#2C1E16] mb-8 tracking-tight font-serif">{title}</h2>
           <div className="glass-panel-light p-8 rounded-2xl border-l-8 border-l-[#4A5D23]">
-            <p className="text-xl md:text-2xl text-[#2C1E16] font-medium leading-relaxed italic">{subtitle}</p>
+            <p className="text-xl md:text-2xl text-[#2C1E16] font-medium leading-relaxed italic text-justify">{subtitle}</p>
           </div>
         </motion.div>
         <motion.div
@@ -101,7 +101,7 @@ const Causes = () => {
               0{index + 1}
             </div>
             <h3 className="text-2xl font-bold text-[#8B4513] mb-4 relative z-10">{item.title}</h3>
-            <p className="text-lg text-[#2C1E16] font-medium leading-relaxed relative z-10 text-justify">{item.desc}</p>
+            <p className="text-lg md:text-xl text-[#2C1E16] font-medium leading-relaxed relative z-10 text-justify">{item.desc}</p>
           </motion.div>
         ))}
       </div>

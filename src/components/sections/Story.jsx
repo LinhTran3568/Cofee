@@ -19,7 +19,7 @@ const Story = () => {
         transition={{ duration: 0.9 }}
         className="glass-panel-light rounded-[2rem] p-8 md:p-10 lg:p-12"
       >
-        <div className="text-[#8B4513] text-sm uppercase tracking-[0.32em] mb-4 font-bold">{intro.title}</div>
+        <div className="text-[#8B4513] text-base uppercase tracking-[0.32em] mb-4 font-bold">{intro.title}</div>
         <div className="grid gap-8 lg:grid-cols-[1.4fr_0.9fr] items-start">
           <div className="space-y-5">
             <p className="text-xl md:text-2xl text-[#2C1E16] font-medium leading-relaxed text-justify">{intro.lead}</p>
@@ -28,7 +28,7 @@ const Story = () => {
           <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
             {intro.stats.map((stat) => (
               <div key={stat.label} className="rounded-2xl border border-white/60 bg-white/55 px-5 py-6 shadow-sm">
-                <div className="text-xs uppercase tracking-[0.24em] text-[#8B4513]/75 font-semibold mb-2">{stat.label}</div>
+                <div className="text-sm uppercase tracking-[0.24em] text-[#8B4513]/75 font-semibold mb-2">{stat.label}</div>
                 <div className="text-2xl md:text-3xl font-bold text-[#4A5D23]">{stat.value}</div>
               </div>
             ))}
@@ -44,7 +44,7 @@ const Story = () => {
           transition={{ duration: 1, delay: 0.2 }}
           className="glass-panel-light p-8 md:p-12 rounded-3xl h-full flex flex-col"
         >
-          <div className="text-[#8B4513] text-sm uppercase tracking-[0.3em] mb-4 font-bold">Người Sản Xuất</div>
+          <div className="text-[#8B4513] text-base uppercase tracking-[0.3em] mb-4 font-bold">Người Sản Xuất</div>
           <h2 className="text-4xl lg:text-5xl font-bold text-[#2C1E16] mb-6 font-serif leading-tight">{farmer.name}</h2>
           
           <div className="w-full h-64 rounded-2xl overflow-hidden mb-8">
@@ -62,7 +62,7 @@ const Story = () => {
           transition={{ duration: 1, delay: 0.4 }}
           className="glass-panel-light p-8 md:p-12 rounded-3xl h-full flex flex-col"
         >
-          <div className="text-[#4A5D23] text-sm uppercase tracking-[0.3em] mb-4 font-bold">Chuỗi Bán Lẻ</div>
+          <div className="text-[#4A5D23] text-base uppercase tracking-[0.3em] mb-4 font-bold">Chuỗi Bán Lẻ</div>
           <h2 className="text-4xl lg:text-5xl font-bold text-[#2C1E16] mb-6 font-serif leading-tight">{retail.name}</h2>
           
           <div className="w-full h-64 rounded-2xl overflow-hidden mb-8">

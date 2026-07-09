@@ -50,8 +50,8 @@ const Concept = () => {
             className="glass-panel-light p-6 rounded-2xl"
           >
             <h3 className="text-xl font-bold text-[#2C1E16] mb-3">{actor.subject}</h3>
-            <p className="text-sm uppercase tracking-[0.2em] text-[#8B4513] font-semibold mb-3">{actor.benefit}</p>
-            <p className="text-[#5C4033] leading-relaxed">{actor.expression}</p>
+            <p className="text-base uppercase tracking-[0.2em] text-[#8B4513] font-semibold mb-3">{actor.benefit}</p>
+            <p className="text-lg text-[#5C4033] leading-relaxed">{actor.expression}</p>
           </motion.div>
         ))}
       </div>
@@ -74,7 +74,7 @@ const Concept = () => {
         </div>
         <div className="grid gap-4 md:grid-cols-3">
           {nature.items.map((item) => (
-            <div key={item} className="rounded-2xl bg-white/55 border border-white/50 p-5 text-[#4A3219] leading-relaxed">
+            <div key={item} className="rounded-2xl bg-white/55 border border-white/50 p-5 text-lg text-[#4A3219] leading-relaxed">
               {item}
             </div>
           ))}

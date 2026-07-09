@@ -15,7 +15,7 @@ const Conclusion = () => {
         viewport={{ once: true }}
         transition={{ duration: 1.5, ease: "easeOut" }}
       >
-        <div className="mb-6 text-xs md:text-sm uppercase tracking-[0.32em] text-[#4A5D23] font-semibold">
+        <div className="mb-6 text-sm md:text-base uppercase tracking-[0.32em] text-[#4A5D23] font-semibold">
           {title}
         </div>
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#8B4513] leading-tight mb-16 tracking-tight font-serif italic text-left">
@@ -27,7 +27,7 @@ const Conclusion = () => {
         </p>
 
         <div className="rounded-2xl border border-[#4A5D23]/15 bg-white/50 p-6 mb-12 text-left">
-          <p className="text-lg md:text-xl text-[#5C4033] leading-relaxed">{bridge}</p>
+          <p className="text-xl text-[#5C4033] leading-relaxed">{bridge}</p>
         </div>
         
         <div className="space-y-6 mb-16 text-justify">
