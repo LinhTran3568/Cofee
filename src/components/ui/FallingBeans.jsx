@@ -38,17 +38,17 @@ const pseudo = (seed, offset = 0) => {
   return val - Math.floor(val);
 };
 
-const FallingBeans = ({ count = 18 }) => {
+const FallingBeans = ({ count = 28 }) => {
   const beans = useMemo(() =>
     Array.from({ length: count }, (_, i) => {
       const leftPct   = pseudo(i, 1) * 100;           // 0-100% horizontal
-      const duration  = 6 + pseudo(i, 2) * 10;        // 6-16s fall
+      const duration  = 5 + pseudo(i, 2) * 9;         // 5-14s fall
       const delay     = pseudo(i, 3) * -15;            // staggered start (-15 to 0s)
-      const size      = 10 + pseudo(i, 4) * 14;       // 10-24px
-      const opacity   = 0.25 + pseudo(i, 5) * 0.35;  // 0.25-0.6
+      const size      = 16 + pseudo(i, 4) * 18;       // 16-34px
+      const opacity   = 0.3 + pseudo(i, 5) * 0.4;    // 0.3-0.7
       const rotation  = pseudo(i, 6) * 360;            // 0-360deg initial
       const rotSpeed  = (pseudo(i, 7) - 0.5) * 720;  // -360 to 360 total rotation
-      const swayAmp   = 20 + pseudo(i, 8) * 40;       // horizontal sway px
+      const swayAmp   = 24 + pseudo(i, 8) * 48;       // horizontal sway px
       const swayDir   = pseudo(i, 9) > 0.5 ? 1 : -1; // sway direction
 
       return { leftPct, duration, delay, size, opacity, rotation, rotSpeed, swayAmp, swayDir };

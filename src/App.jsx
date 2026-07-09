@@ -18,7 +18,7 @@ function App() {
       <div className="fixed inset-0 bg-white/65 pointer-events-none z-0"></div>
 
       {/* Falling coffee beans particle effect */}
-      <FallingBeans count={20} />
+      <FallingBeans count={32} />
 
       {/* Navigation */}
       <Navbar />
