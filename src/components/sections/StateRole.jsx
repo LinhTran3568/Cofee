@@ -53,9 +53,9 @@ const StateRole = () => {
       >
         <h3 className="text-2xl font-bold text-[#2C1E16] mb-4">{foundationTitle}</h3>
         <p className="text-lg text-[#5C4033] leading-relaxed mb-6 text-justify">{foundationLead}</p>
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2">
           {foundation.map((item, index) => (
-            <div key={item} className="rounded-2xl bg-white/55 border border-white/50 p-6">
+            <div key={item} className="rounded-2xl bg-white/55 border border-white/50 p-6 md:p-8 h-full">
               <div className="text-base md:text-lg font-bold uppercase tracking-[0.2em] text-[#8B4513] mb-3">0{index + 1}</div>
               <p className="text-lg md:text-xl text-[#4A3219] leading-relaxed">{item}</p>
             </div>
