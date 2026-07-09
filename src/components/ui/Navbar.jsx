@@ -5,8 +5,8 @@ const sections = [
   { id: 'hero', label: 'Mở đầu' },
   { id: 'story', label: 'Câu chuyện' },
   { id: 'concept', label: 'Khái niệm' },
-  { id: 'valuechain', label: 'Chuỗi giá trị' },
-  { id: 'causes', label: 'Nguyên nhân' },
+  { id: 'valuechain', label: 'Biểu hiện' },
+  { id: 'causes', label: 'Quan hệ lợi ích' },
   { id: 'state', label: 'Nhà nước' },
   { id: 'conclusion', label: 'Kết luận' },
 ];

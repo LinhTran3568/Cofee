@@ -3,10 +3,66 @@ import { motion } from 'framer-motion';
 import { presentationData } from '../../data/content';
 
 const Causes = () => {
+  const { deepDiveTitle, deepDiveSubtitle, deepDiveIntroTitle, deepDiveIntroTheory, deepDiveIntroApply, dimensions, relations } =
+    presentationData.concept;
   const { title, subtitle, items } = presentationData.causes;
 
   return (
     <section className="min-h-screen py-32 px-8 lg:px-24 relative z-10 flex flex-col justify-center">
+      <motion.div
+        initial={{ y: 40, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="glass-panel-light p-8 rounded-2xl max-w-7xl w-full mb-12"
+      >
+        <h2 className="text-5xl md:text-7xl font-bold text-[#2C1E16] mb-4 tracking-tight font-serif">{deepDiveTitle}</h2>
+        <p className="text-lg text-[#4A5D23] font-semibold mb-6">{deepDiveSubtitle}</p>
+        <p className="text-xl font-bold text-[#8B4513] mb-4">{deepDiveIntroTitle}</p>
+        <p className="text-lg text-[#2C1E16] leading-relaxed text-justify mb-4">{deepDiveIntroTheory}</p>
+        <p className="text-lg text-[#5C4033] font-medium">{deepDiveIntroApply}</p>
+      </motion.div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl w-full mb-12">
+        <div className="space-y-8">
+          {dimensions.map((dim, idx) => (
+            <motion.div
+              key={dim.title}
+              initial={{ x: -50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: idx * 0.2 }}
+              className="glass-panel-light p-8 rounded-2xl"
+            >
+              <h3 className="text-2xl font-bold text-[#4A5D23] mb-4 border-b border-[#4A5D23]/20 pb-4">{dim.title}</h3>
+              <p className="text-lg text-[#2C1E16] font-medium leading-relaxed text-justify">{dim.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.div
+          initial={{ x: 50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.4 }}
+          className="glass-panel-light p-8 rounded-2xl"
+        >
+          <h3 className="text-2xl font-bold text-[#8B4513] mb-6 border-b border-[#8B4513]/20 pb-4">2. Sự thống nhất và mâu thuẫn</h3>
+          <div className="space-y-6 text-justify">
+            <p className="text-lg text-[#5C4033] leading-relaxed">{relations.theory}</p>
+            <p className="text-lg text-[#2C1E16] font-medium leading-relaxed">
+              <span className="text-[#4A5D23] font-bold block mb-2">Tính thống nhất:</span>
+              {relations.unity}
+            </p>
+            <div className="h-[1px] w-full bg-[#2C1E16]/10"></div>
+            <p className="text-lg text-[#2C1E16] font-medium leading-relaxed">
+              <span className="text-[#8B4513] font-bold block mb-2">Tính mâu thuẫn:</span>
+              {relations.conflict}
+            </p>
+          </div>
+        </motion.div>
+      </div>
+
       <div className="flex flex-col lg:flex-row gap-12 mb-16 items-start max-w-7xl mx-auto w-full">
         <motion.div 
           className="flex-1 max-w-3xl"
