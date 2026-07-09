@@ -16,15 +16,24 @@ const pageTransition = {
 const PageTransition = ({ children }) => {
   return (
     <AnimatePresence mode="wait">
-      <motion.div
-        initial="initial"
-        animate="enter"
-        exit="exit"
-        variants={pageVariants}
-        transition={pageTransition}
-      >
-        {children}
-      </motion.div>
+      <>
+        <motion.div
+          className="fixed inset-0 z-40 pointer-events-none origin-top bg-[linear-gradient(180deg,rgba(74,93,35,0.96),rgba(139,69,19,0.9),rgba(248,242,230,0.0))]"
+          initial={{ scaleY: 1 }}
+          animate={{ scaleY: 0 }}
+          exit={{ scaleY: 1 }}
+          transition={{ duration: 1.15, ease: [0.76, 0, 0.24, 1] }}
+        />
+        <motion.div
+          initial="initial"
+          animate="enter"
+          exit="exit"
+          variants={pageVariants}
+          transition={pageTransition}
+        >
+          {children}
+        </motion.div>
+      </>
     </AnimatePresence>
   );
 };

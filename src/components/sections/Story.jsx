@@ -3,18 +3,41 @@ import { motion } from 'framer-motion';
 import { presentationData } from '../../data/content';
 
 const Story = () => {
-  const { farmer, retail } = presentationData.story;
+  const { intro, farmer, retail } = presentationData.story;
 
   return (
-    <motion.section 
-      className="min-h-screen flex flex-col lg:flex-row relative z-10 max-w-7xl mx-auto py-20 px-8 gap-12"
+    <motion.section
+      className="min-h-screen relative z-10 max-w-7xl mx-auto py-20 px-4 md:px-8 space-y-10"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-20%" }}
       transition={{ duration: 1.5 }}
     >
-      {/* Farmer Side */}
-      <div className="flex-1 flex flex-col justify-center group">
+      <motion.div
+        initial={{ y: 40, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.9 }}
+        className="glass-panel-light rounded-[2rem] p-8 md:p-10 lg:p-12"
+      >
+        <div className="text-[#8B4513] text-sm uppercase tracking-[0.32em] mb-4 font-bold">{intro.title}</div>
+        <div className="grid gap-8 lg:grid-cols-[1.4fr_0.9fr] items-start">
+          <div className="space-y-5">
+            <p className="text-xl md:text-2xl text-[#2C1E16] font-medium leading-relaxed text-justify">{intro.lead}</p>
+            <p className="text-lg md:text-xl text-[#5C4033] leading-relaxed text-justify">{intro.insight}</p>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
+            {intro.stats.map((stat) => (
+              <div key={stat.label} className="rounded-2xl border border-white/60 bg-white/55 px-5 py-6 shadow-sm">
+                <div className="text-xs uppercase tracking-[0.24em] text-[#8B4513]/75 font-semibold mb-2">{stat.label}</div>
+                <div className="text-2xl md:text-3xl font-bold text-[#4A5D23]">{stat.value}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+
+      <div className="flex flex-col lg:flex-row gap-12">
+        <div className="flex-1 flex flex-col justify-center group">
         <motion.div 
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -32,8 +55,7 @@ const Story = () => {
         </motion.div>
       </div>
 
-      {/* Retail Side */}
-      <div className="flex-1 flex flex-col justify-center group">
+        <div className="flex-1 flex flex-col justify-center group">
         <motion.div 
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -49,6 +71,7 @@ const Story = () => {
           
           <p className="text-xl text-[#4A3219] font-medium leading-relaxed mt-auto text-justify">{retail.description}</p>
         </motion.div>
+      </div>
       </div>
     </motion.section>
   );

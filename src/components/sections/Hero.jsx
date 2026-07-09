@@ -7,13 +7,21 @@ const Hero = () => {
 
   return (
     <motion.section 
-      className="h-screen flex flex-col items-center justify-center p-8 relative z-10"
+      className="min-h-screen flex flex-col items-center justify-center px-4 py-24 md:px-8 relative z-10"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -50 }}
       transition={{ duration: 1.5, ease: "easeOut" }}
     >
-      <div className="glass-panel-light p-12 md:p-20 rounded-3xl text-center z-10 max-w-5xl mx-auto space-y-8">
+      <div className="glass-panel-light p-8 md:p-14 lg:p-20 rounded-[2rem] text-center z-10 max-w-5xl mx-auto space-y-6 md:space-y-8 shadow-[0_30px_70px_rgba(59,39,24,0.16)]">
+        <motion.div
+          className="inline-flex items-center rounded-full border border-[#8B4513]/15 bg-[#f7f0e2]/80 px-4 py-2 text-xs md:text-sm font-semibold uppercase tracking-[0.28em] text-[#8B4513]"
+          initial={{ y: 16, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.35 }}
+        >
+          Kinh tế chính trị Mác - Lênin
+        </motion.div>
         <motion.h1 
           className="text-5xl md:text-7xl lg:text-[84px] font-bold text-[#2C1E16] leading-tight tracking-tight"
           initial={{ y: 30, opacity: 0 }}
@@ -25,7 +33,7 @@ const Hero = () => {
         </motion.h1>
         
         <motion.p 
-          className="text-2xl md:text-3xl text-[#5C4033] font-medium tracking-wide"
+          className="mx-auto max-w-3xl text-xl md:text-3xl text-[#5C4033] font-medium tracking-wide"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1.2, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}

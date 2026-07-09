@@ -3,7 +3,19 @@ import { motion } from 'framer-motion';
 import { presentationData } from '../../data/content';
 
 const StateRole = () => {
-  const { title, subtitle, preventive, resolution } = presentationData.stateRole;
+  const {
+    title,
+    subtitle,
+    context,
+    foundationTitle,
+    foundationLead,
+    foundation,
+    redistributionTitle,
+    redistributionTheory,
+    redistributionItems,
+    preventive,
+    resolution,
+  } = presentationData.stateRole;
 
   return (
     <section className="min-h-screen py-32 px-8 lg:px-24 relative z-10 flex flex-col justify-center">
@@ -16,8 +28,9 @@ const StateRole = () => {
           transition={{ duration: 1 }}
         >
           <h2 className="text-5xl md:text-7xl font-bold text-[#2C1E16] mb-8 tracking-tight font-serif">{title}</h2>
-          <div className="glass-panel-light p-8 rounded-2xl border-l-8 border-l-[#8B4513] max-w-4xl">
+          <div className="glass-panel-light p-8 rounded-2xl border-l-8 border-l-[#8B4513] max-w-4xl space-y-4">
             <p className="text-xl md:text-2xl text-[#2C1E16] font-medium leading-relaxed italic text-justify">{subtitle}</p>
+            <p className="text-lg text-[#5C4033] leading-relaxed text-justify">{context}</p>
           </div>
         </motion.div>
         <motion.div
@@ -30,6 +43,44 @@ const StateRole = () => {
           <img src="/assets/state.png" alt="State Intervention" className="w-full h-full object-cover" />
         </motion.div>
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="max-w-7xl w-full mb-12 glass-panel-light p-8 rounded-3xl"
+      >
+        <h3 className="text-2xl font-bold text-[#2C1E16] mb-4">{foundationTitle}</h3>
+        <p className="text-lg text-[#5C4033] leading-relaxed mb-6 text-justify">{foundationLead}</p>
+        <div className="grid gap-4 md:grid-cols-3">
+          {foundation.map((item, index) => (
+            <div key={item} className="rounded-2xl bg-white/55 border border-white/50 p-6">
+              <div className="text-sm font-bold uppercase tracking-[0.2em] text-[#8B4513] mb-3">0{index + 1}</div>
+              <p className="text-[#4A3219] leading-relaxed">{item}</p>
+            </div>
+          ))}
+        </div>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.25 }}
+        className="max-w-7xl w-full mb-12 glass-panel-light p-8 rounded-3xl"
+      >
+        <h3 className="text-2xl font-bold text-[#2C1E16] mb-4">{redistributionTitle}</h3>
+        <p className="text-lg text-[#5C4033] leading-relaxed mb-6 text-justify">{redistributionTheory}</p>
+        <div className="space-y-4">
+          {redistributionItems.map((item, index) => (
+            <div key={item} className="rounded-2xl bg-white/55 border border-white/50 p-6">
+              <div className="text-sm font-bold uppercase tracking-[0.2em] text-[#8B4513] mb-3">0{index + 1}</div>
+              <p className="text-[#4A3219] leading-relaxed text-justify">{item}</p>
+            </div>
+          ))}
+        </div>
+      </motion.div>
 
       <div className="flex flex-col lg:flex-row gap-12 max-w-7xl w-full">
         {/* Preventive Measures */}
@@ -70,6 +121,14 @@ const StateRole = () => {
           <p className="text-lg md:text-xl text-[#2C1E16] font-medium leading-relaxed text-justify relative z-10">
             {resolution.desc}
           </p>
+          <div className="mt-8 space-y-4 relative z-10">
+            {resolution.actions.map((action, index) => (
+              <div key={action} className="flex gap-4 items-start rounded-2xl border border-[#8B4513]/10 bg-white/45 p-4">
+                <span className="text-[#8B4513] font-bold">0{index + 1}</span>
+                <p className="text-[#2C1E16] leading-relaxed">{action}</p>
+              </div>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>

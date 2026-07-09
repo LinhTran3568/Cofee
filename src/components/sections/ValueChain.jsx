@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { presentationData } from '../../data/content';
 
 const ValueChain = () => {
-  const { title, subtitle, steps, update2024 } = presentationData.valueChain;
+  const { title, subtitle, steps, commentary, update2024, ending } = presentationData.valueChain;
 
   return (
     <section className="min-h-screen py-32 px-8 lg:px-24 relative z-10 flex flex-col justify-center">
@@ -48,12 +48,27 @@ const ValueChain = () => {
                   <h3 className="text-2xl font-bold text-[#2C1E16] mb-2">{step.name}</h3>
                   <p className="text-[#8B4513] text-sm uppercase tracking-widest mb-4 font-bold">{step.role}</p>
                 </div>
-                <p className="text-lg text-[#5C4033] font-medium border-t border-[#8B4513]/20 pt-4 mt-4">{step.effort}</p>
+                <div className="border-t border-[#8B4513]/20 pt-4 mt-4 space-y-3">
+                  <p className="text-lg text-[#5C4033] font-medium">{step.effort}</p>
+                  <p className="text-[#2C1E16] leading-relaxed">{step.note}</p>
+                </div>
               </div>
             </motion.div>
           ))}
         </div>
       </div>
+
+      <motion.div
+        initial={{ y: 40, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.9, delay: 0.5 }}
+        className="max-w-5xl mt-12 glass-panel-light p-8 rounded-2xl"
+      >
+        <p className="text-lg md:text-xl text-[#2C1E16] leading-relaxed font-medium text-justify">
+          {commentary}
+        </p>
+      </motion.div>
 
       <motion.div
         initial={{ y: 50, opacity: 0 }}
@@ -64,6 +79,18 @@ const ValueChain = () => {
       >
         <p className="text-lg md:text-xl text-[#2C1E16] leading-relaxed font-medium text-justify">
           "{update2024}"
+        </p>
+      </motion.div>
+
+      <motion.div
+        initial={{ y: 40, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.9, delay: 1 }}
+        className="max-w-5xl mt-10 glass-panel-light p-8 rounded-2xl"
+      >
+        <p className="text-lg md:text-xl text-[#5C4033] leading-relaxed font-medium text-justify">
+          {ending}
         </p>
       </motion.div>
     </section>

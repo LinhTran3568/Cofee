@@ -3,9 +3,14 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply text-[#2C1E16] overflow-x-hidden;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Lora', serif;
+    background: #f5ead7;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -20,6 +25,10 @@
   
   .text-glow-light {
     text-shadow: 0 0 30px rgba(255, 255, 255, 1);
+  }
+
+  .section-shell {
+    @apply relative z-10 scroll-mt-24 px-4 md:px-6;
   }
 }
 
@@ -38,10 +47,71 @@
   background: rgba(44, 30, 22, 0.6);
 }
 
-.bg-parallax {
+.presentation-shell {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+}
+
+.presentation-backdrop {
+  position: fixed;
+  inset: -4%;
+  z-index: -3;
   background-image: url('/assets/bg.png');
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.presentation-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+}
+
+.presentation-overlay-top {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(248, 242, 230, 0.9) 0%, rgba(248, 242, 230, 0.7) 24%, rgba(248, 242, 230, 0.45) 52%, rgba(248, 242, 230, 0.75) 100%);
+  backdrop-filter: blur(3px);
+}
+
+.presentation-overlay-glow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255, 248, 232, 0.65), transparent 32%),
+    radial-gradient(circle at 82% 22%, rgba(255, 243, 214, 0.45), transparent 26%),
+    radial-gradient(circle at 50% 78%, rgba(111, 84, 42, 0.12), transparent 34%);
+  mix-blend-mode: screen;
+}
+
+.presentation-overlay-grain {
+  position: absolute;
+  inset: 0;
+  opacity: 0.08;
+  background-image:
+    linear-gradient(rgba(73, 52, 35, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(73, 52, 35, 0.05) 1px, transparent 1px);
+  background-size: 120px 120px;
+}
+
+.section-divider {
+  width: min(1180px, calc(100% - 3rem));
+  height: 1px;
+  margin: 0 auto;
+  background: linear-gradient(90deg, transparent, rgba(92, 64, 51, 0.2), rgba(74, 93, 35, 0.38), rgba(92, 64, 51, 0.2), transparent);
+}
+
+@media (max-width: 768px) {
+  .presentation-backdrop {
+    inset: -8%;
+  }
+
+  .section-divider {
+    width: calc(100% - 2rem);
+  }
 }
