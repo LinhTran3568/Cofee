@@ -13,7 +13,7 @@ const Hero = () => {
       exit={{ opacity: 0, y: -50 }}
       transition={{ duration: 1.5, ease: "easeOut" }}
     >
-      <div className="glass-panel-light p-8 md:p-14 lg:p-20 rounded-[2rem] text-center z-10 max-w-5xl mx-auto space-y-6 md:space-y-8 shadow-[0_30px_70px_rgba(59,39,24,0.16)]">
+      <div className="hero-glass-panel p-10 md:p-16 lg:p-24 rounded-3xl text-center z-10 max-w-5xl mx-auto space-y-8 md:space-y-10">
         <motion.div
           className="inline-flex items-center rounded-full border border-[#8B4513]/15 bg-[#f7f0e2]/80 px-4 py-2 text-xs md:text-sm font-semibold uppercase tracking-[0.28em] text-[#8B4513]"
           initial={{ y: 16, opacity: 0 }}
