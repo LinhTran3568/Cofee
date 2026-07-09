@@ -38,6 +38,11 @@ function App() {
         <div className="presentation-overlay-top" />
         <div className="presentation-overlay-glow" />
         <div className="presentation-overlay-grain" />
+        <div className="presentation-orb presentation-orb-a" />
+        <div className="presentation-orb presentation-orb-b" />
+        <div className="presentation-orb presentation-orb-c" />
+        <div className="presentation-ribbon presentation-ribbon-a" />
+        <div className="presentation-ribbon presentation-ribbon-b" />
       </div>
 
       {/* Falling coffee beans particle effect */}
