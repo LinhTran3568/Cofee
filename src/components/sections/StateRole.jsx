@@ -72,10 +72,10 @@ const StateRole = () => {
       >
         <h3 className="text-3xl font-bold text-[#2C1E16] mb-4">{redistributionTitle}</h3>
         <p className="text-xl md:text-2xl text-[#5C4033] leading-relaxed mb-6">{redistributionTheory}</p>
-        <div className="space-y-4">
+        <div className="grid gap-6 md:grid-cols-2">
           {redistributionItems.map((item, index) => (
-            <div key={item} className="rounded-2xl bg-white/55 border border-white/50 p-6 text-center">
-              <div className="text-lg md:text-xl font-bold uppercase tracking-[0.2em] text-[#8B4513] mb-3">0{index + 1}</div>
+            <div key={item} className="rounded-2xl bg-white/55 border border-white/50 p-6 md:p-8 h-full text-center hover:-translate-y-2 transition-transform duration-300">
+              <div className="text-xl md:text-2xl font-bold uppercase tracking-[0.2em] text-[#8B4513] mb-4">0{index + 1}</div>
               <p className="text-xl md:text-2xl text-[#4A3219] leading-relaxed">{item}</p>
             </div>
           ))}
