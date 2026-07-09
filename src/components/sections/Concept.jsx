@@ -35,8 +35,10 @@ const Concept = () => {
         </div>
       </motion.div>
 
-      <div className="max-w-7xl w-full mb-5">
-        <p className="text-lg md:text-xl text-[#5C4033] font-medium">{actorsIntro}</p>
+      <div className="max-w-7xl w-full mb-8 text-center md:text-left">
+        <div className="inline-block bg-white/70 backdrop-blur-md px-6 py-2 rounded-full border border-white/50 shadow-sm">
+          <p className="text-lg md:text-xl text-[#8B4513] font-bold">{actorsIntro}</p>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 max-w-7xl w-full mb-12">
