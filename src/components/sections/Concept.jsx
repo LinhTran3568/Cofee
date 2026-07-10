@@ -26,7 +26,9 @@ const Concept = () => {
         className="max-w-5xl mb-16 mx-auto text-center"
       >
         <h2 className="text-5xl md:text-7xl font-bold text-[#2C1E16] mb-4 tracking-tight font-serif">{title}</h2>
-        <p className="text-2xl md:text-3xl text-[#4A5D23] font-bold mb-8 uppercase tracking-widest">{subtitle}</p>
+        {subtitle ? (
+          <p className="text-2xl md:text-3xl text-[#4A5D23] font-bold mb-8 uppercase tracking-widest">{subtitle}</p>
+        ) : null}
         <div className="glass-panel-light p-8 rounded-2xl border-l-8 border-l-[#8B4513] space-y-4">
           <p className="text-xl md:text-2xl text-[#2C1E16] font-medium leading-relaxed italic text-center">
             "{definition}"

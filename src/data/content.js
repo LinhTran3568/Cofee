@@ -32,7 +32,7 @@ export const presentationData = {
   },
   concept: {
     title: "I. Khái niệm lợi ích kinh tế",
-    subtitle: "Mục 5.3.1.2 - Giáo trình Kinh tế chính trị Mác - Lênin",
+    subtitle: "",
     definition:
       "Để tồn tại và phát triển, con người cần được thỏa mãn các nhu cầu vật chất. Lợi ích kinh tế là lợi ích vật chất, lợi ích thu được khi thực hiện các hoạt động kinh tế của con người.",
     overview:
