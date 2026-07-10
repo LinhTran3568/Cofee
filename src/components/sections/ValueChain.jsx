@@ -4,6 +4,10 @@ import { presentationData } from '../../data/content';
 
 const ValueChain = () => {
   const { title, subtitle, steps, commentary, update2024, ending } = presentationData.valueChain;
+  const formatStepValue = (value) => {
+    const [first, second] = value.split(' / ');
+    return second ? { first: `${first} /`, second } : { first: value, second: '' };
+  };
 
   return (
     <section className="min-h-screen py-32 px-8 lg:px-24 relative z-10 flex flex-col justify-center">
@@ -44,7 +48,21 @@ const ValueChain = () => {
             >
               <div className="flex flex-col h-full justify-between">
                 <div>
-                  <span className="text-4xl md:text-5xl font-bold text-[#4A5D23] mb-4 block leading-tight">{step.value}</span>
+                  <span className="text-4xl md:text-5xl font-bold text-[#4A5D23] mb-4 block leading-tight">
+                    {(() => {
+                      const formattedValue = formatStepValue(step.value);
+                      if (!formattedValue.second) {
+                        return step.value;
+                      }
+
+                      return (
+                        <>
+                          <span className="block whitespace-nowrap">{formattedValue.first}</span>
+                          <span className="block">{formattedValue.second}</span>
+                        </>
+                      );
+                    })()}
+                  </span>
                   <h3 className="text-2xl font-bold text-[#2C1E16] mb-2">{step.name}</h3>
                   <p className="text-[#8B4513] text-lg uppercase tracking-widest mb-4 font-bold">{step.role}</p>
                 </div>
