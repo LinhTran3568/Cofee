@@ -2,7 +2,7 @@ export const presentationData = {
   hero: {
     title: "Lợi ích kinh tế và",
     highlightTitle: "Quan hệ lợi ích kinh tế",
-    subtitle: "Từ hạt cà phê 40.000đ/kg đến ly cà phê 85.000đ tại TP.HCM",
+    subtitle: "Từ vườn cà phê Đắk Lắk đến ly cà phê 85.000đ tại Highlands",
   },
   story: {
     intro: {
