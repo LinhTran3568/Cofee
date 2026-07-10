@@ -256,6 +256,12 @@ export const presentationData = {
       '"Coi lợi ích kinh tế là động lực của các hoạt động kinh tế; phải tôn trọng lợi ích cá nhân chính đáng." - Văn kiện Đại hội XII, ĐCSVN',
     ],
     buttonText: "Quay lại mở đầu",
-    finalWish: "Cảm ơn cô và các bạn đã lắng nghe!"
+    finalWish: [
+      "Từ hạt cà phê đến ly cà phê,",
+      "mỗi mắt xích đều góp phần tạo nên giá trị.",
+      "",
+      "Nhưng giá trị chỉ thực sự bền vững",
+      "khi lợi ích được phân phối công bằng.",
+    ]
   },
 };

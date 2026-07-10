@@ -4,6 +4,7 @@ import { presentationData } from '../../data/content';
 
 const Conclusion = () => {
   const { title, message, summary, bridge, quotes, finalWish } = presentationData.conclusion;
+  const closingLines = Array.isArray(finalWish) ? finalWish : [finalWish];
 
   const container = {
     hidden: { opacity: 0 },
@@ -69,13 +70,45 @@ const Conclusion = () => {
         </motion.div>
 
         {/* Final Wish */}
-        <motion.div variants={item} className="pt-20 pb-12 text-center flex flex-col items-center">
-           <div className="glass-panel-light px-10 py-6 md:px-16 md:py-8 rounded-[3rem] inline-block border-2 border-white/80">
-             <h3 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-[#4A5D23] italic tracking-wide whitespace-nowrap">
-               {finalWish}
-             </h3>
-             <div className="w-32 h-[3px] bg-gradient-to-r from-transparent via-[#8B4513] to-transparent mx-auto mt-6 rounded-full opacity-70"></div>
-           </div>
+        <motion.div variants={item} className="pt-24 pb-12 text-center flex flex-col items-center">
+          <div className="relative max-w-6xl px-4 md:px-8 py-10 md:py-14">
+            <div className="absolute inset-0 -z-10 rounded-[2.5rem] bg-[radial-gradient(circle_at_center,rgba(248,241,228,0.92)_0%,rgba(244,235,219,0.82)_34%,rgba(110,76,45,0.36)_72%,rgba(110,76,45,0.08)_100%)] backdrop-blur-[3px]"></div>
+            <div className="absolute inset-x-[8%] top-[14%] -z-10 h-[32%] rounded-full bg-white/18 blur-3xl"></div>
+            <div className="mx-auto mb-8 h-px w-32 bg-gradient-to-r from-transparent via-[#8b5128] to-transparent opacity-95"></div>
+            <div className="space-y-4 md:space-y-5">
+              {closingLines.map((line, idx) =>
+                line ? (
+                  <p
+                    key={idx}
+                    className={`italic ${
+                      idx < 2
+                        ? 'text-[2.1rem] md:text-[3.35rem] lg:text-[4.2rem] font-bold leading-[1.16] tracking-[0.015em]'
+                        : 'text-[1.8rem] md:text-[2.8rem] lg:text-[3.5rem] font-semibold leading-[1.2] tracking-[0.02em]'
+                    }`}
+                    style={{
+                      fontFamily: '"Cormorant Garamond", "Playfair Display", serif',
+                      color: idx < 2 ? '#3f2212' : '#4b2917',
+                      textShadow:
+                        idx < 2
+                          ? '0 1px 0 rgba(255, 251, 244, 1), 0 0 20px rgba(255, 247, 233, 0.52), 0 10px 28px rgba(58, 33, 17, 0.32), 0 18px 40px rgba(58, 33, 17, 0.2)'
+                          : '0 1px 0 rgba(255, 251, 244, 0.96), 0 0 16px rgba(255, 247, 233, 0.42), 0 8px 22px rgba(58, 33, 17, 0.28), 0 14px 34px rgba(58, 33, 17, 0.18)',
+                    }}
+                  >
+                    {line}
+                  </p>
+                ) : (
+                  <div key={idx} className="h-4 md:h-7" aria-hidden="true" />
+                )
+              )}
+            </div>
+            <div className="mx-auto mt-8 flex items-center justify-center gap-4 opacity-85">
+              <span className="h-px w-10 bg-[#a86d3d]/70"></span>
+              <span className="text-[0.7rem] md:text-xs uppercase tracking-[0.45em] text-[#8f5b35]">
+                Fair Value
+              </span>
+              <span className="h-px w-10 bg-[#a86d3d]/70"></span>
+            </div>
+          </div>
         </motion.div>
 
       </motion.div>
