@@ -21,6 +21,41 @@ const Conclusion = () => {
     show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
   };
 
+  const closingShell = {
+    hidden: { opacity: 0, y: 44, scale: 0.96, filter: 'blur(10px)' },
+    show: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      filter: 'blur(0px)',
+      transition: {
+        duration: 1.1,
+        ease: [0.18, 1, 0.3, 1],
+        staggerChildren: 0.18,
+        delayChildren: 0.14,
+      }
+    }
+  };
+
+  const closingLine = {
+    hidden: { opacity: 0, y: 32, rotateX: -14 },
+    show: {
+      opacity: 1,
+      y: 0,
+      rotateX: 0,
+      transition: { duration: 0.9, ease: [0.2, 1, 0.32, 1] }
+    }
+  };
+
+  const dividerReveal = {
+    hidden: { opacity: 0, scaleX: 0.35 },
+    show: {
+      opacity: 1,
+      scaleX: 1,
+      transition: { duration: 0.95, ease: [0.22, 1, 0.36, 1] }
+    }
+  };
+
   return (
     <section className="min-h-screen py-24 px-4 md:px-8 relative z-10 flex flex-col items-center justify-center">
       <motion.div 
@@ -71,15 +106,38 @@ const Conclusion = () => {
 
         {/* Final Wish */}
         <motion.div variants={item} className="pt-24 pb-12 text-center flex flex-col items-center">
-          <div className="relative max-w-6xl px-4 md:px-8 py-10 md:py-14">
-            <div className="absolute inset-0 -z-10 rounded-[2.5rem] bg-[radial-gradient(circle_at_center,rgba(248,241,228,0.92)_0%,rgba(244,235,219,0.82)_34%,rgba(110,76,45,0.36)_72%,rgba(110,76,45,0.08)_100%)] backdrop-blur-[3px]"></div>
-            <div className="absolute inset-x-[8%] top-[14%] -z-10 h-[32%] rounded-full bg-white/18 blur-3xl"></div>
-            <div className="mx-auto mb-8 h-px w-32 bg-gradient-to-r from-transparent via-[#8b5128] to-transparent opacity-95"></div>
+          <motion.div
+            className="relative max-w-6xl px-4 md:px-8 py-10 md:py-14"
+            variants={closingShell}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.55 }}
+            style={{ transformPerspective: 1200 }}
+          >
+            <motion.div
+              className="absolute inset-0 -z-10 rounded-[2.5rem] bg-[radial-gradient(circle_at_center,rgba(248,241,228,0.92)_0%,rgba(244,235,219,0.82)_34%,rgba(110,76,45,0.36)_72%,rgba(110,76,45,0.08)_100%)] backdrop-blur-[3px]"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: false, amount: 0.55 }}
+              transition={{ duration: 1.05, ease: [0.18, 1, 0.3, 1] }}
+            />
+            <motion.div
+              className="absolute inset-x-[8%] top-[14%] -z-10 h-[32%] rounded-full bg-white/18 blur-3xl"
+              initial={{ opacity: 0, scale: 0.72 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: false, amount: 0.55 }}
+              transition={{ duration: 1.2, delay: 0.08, ease: [0.18, 1, 0.3, 1] }}
+            />
+            <motion.div
+              className="mx-auto mb-8 h-px w-32 origin-center bg-gradient-to-r from-transparent via-[#8b5128] to-transparent opacity-95"
+              variants={dividerReveal}
+            />
             <div className="space-y-4 md:space-y-5">
               {closingLines.map((line, idx) =>
                 line ? (
-                  <p
+                  <motion.p
                     key={idx}
+                    variants={closingLine}
                     className={`italic ${
                       idx < 2
                         ? 'text-[2.1rem] md:text-[3.35rem] lg:text-[4.2rem] font-bold leading-[1.16] tracking-[0.015em]'
@@ -95,20 +153,23 @@ const Conclusion = () => {
                     }}
                   >
                     {line}
-                  </p>
+                  </motion.p>
                 ) : (
                   <div key={idx} className="h-4 md:h-7" aria-hidden="true" />
                 )
               )}
             </div>
-            <div className="mx-auto mt-8 flex items-center justify-center gap-4 opacity-85">
+            <motion.div
+              className="mx-auto mt-8 flex items-center justify-center gap-4 opacity-85"
+              variants={dividerReveal}
+            >
               <span className="h-px w-10 bg-[#a86d3d]/70"></span>
               <span className="text-[0.7rem] md:text-xs uppercase tracking-[0.45em] text-[#8f5b35]">
                 Fair Value
               </span>
               <span className="h-px w-10 bg-[#a86d3d]/70"></span>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </motion.div>
 
       </motion.div>
