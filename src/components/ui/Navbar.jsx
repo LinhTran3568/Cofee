@@ -57,15 +57,13 @@ const Navbar = () => {
             onClick={() => scrollTo('hero')}
             className="text-left"
           >
-            <div className="text-xs uppercase tracking-[0.35em] text-[#8B4513]/80 font-semibold">Presentation</div>
             <div className="text-[#2C1E16] font-serif font-bold text-xl md:text-[1.35rem] tracking-tight whitespace-nowrap hover:text-[#4A5D23] transition-colors">
               Chuỗi Cà Phê VN
             </div>
+            <div className="text-[0.7rem] md:text-xs uppercase tracking-[0.35em] text-[#8B4513]/80 font-semibold whitespace-nowrap">
+              Từ nông trại đến ly cà phê
+            </div>
           </button>
-          <div className="hidden lg:block w-px h-10 bg-[#8B4513]/15" />
-          <div className="hidden lg:block text-base text-[#5C4033] font-medium whitespace-nowrap">
-            Từ nông trại đến ly cà phê
-          </div>
         </div>
 
         <div className="hidden md:flex items-center gap-1 rounded-full border border-white/50 bg-white/45 px-2 py-2 shadow-[0_10px_30px_rgba(60,42,24,0.08)]">
