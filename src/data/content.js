@@ -2,7 +2,7 @@ export const presentationData = {
   hero: {
     title: "Lợi ích kinh tế và",
     highlightTitle: "Quan hệ lợi ích kinh tế",
-    subtitle: "Từ vườn cà phê Đắk Lắk đến ly cà phê 85.000đ tại Highlands",
+    subtitle: "Từ hạt cà phê 40.000đ/kg đến ly cà phê 85.000đ tại TP.HCM",
   },
   story: {
     intro: {
@@ -10,23 +10,23 @@ export const presentationData = {
       lead:
         "Anh Khánh thức dậy lúc 5 giờ sáng ở Đắk Lắk, hái từng hạt cà phê rồi bán cho thương lái với giá 40.000đ/kg. Cùng ngày hôm đó, tại TP.HCM, một ly cà phê từ chính hạt đó được Highlands bán với giá 85.000đ.",
       insight:
-        "Anh Khánh chỉ nhận về 9,4% tổng lợi nhuận chuỗi — trong khi bỏ ra nhiều năm lao động và gánh chịu rủi ro lớn nhất.",
+        "Người trồng ra hạt cà phê nhận phần nhỏ nhất, trong khi bỏ ra nhiều năm lao động và gánh chịu rủi ro lớn nhất trong toàn chuỗi.",
       stats: [
         { label: "Giá bán nguyên liệu", value: "40.000đ/kg" },
         { label: "Giá bán lẻ", value: "85.000đ/ly" },
-        { label: "Tỷ phần lợi nhuận", value: "9,4%" },
+        { label: "Thực trạng", value: "Nông dân nhận ít nhất" },
       ],
     },
     farmer: {
       name: "Anh Khánh (Nông dân Đắk Lắk)",
       description:
-        "Nông dân (anh Khánh): Thu nhập từ lao động. 40.000đ/kg — đủ tái sản xuất tối thiểu.",
+        "Nông dân (anh Khánh): Thu nhập từ lao động. Bán 40.000đ/kg, đủ tái sản xuất tối thiểu.",
       image: "/assets/raw_beans.png",
     },
     retail: {
       name: "Highlands Coffee (Bán lẻ)",
       description:
-        "Highlands Coffee: Lợi nhuận từ thương hiệu. 85.000đ/ly — chiếm 64,7% tổng lợi nhuận chuỗi.",
+        "Highlands Coffee: Lợi nhuận từ thương hiệu. Bán 85.000đ/ly, nhận phần lớn nhất trong chuỗi.",
       image: "/assets/premium_cup.png",
     },
   },
@@ -42,26 +42,26 @@ export const presentationData = {
       {
         subject: "Nông dân (anh Khánh)",
         benefit: "Thu nhập từ lao động",
-        expression: "40.000đ/kg — đủ tái sản xuất tối thiểu",
+        expression: "Bán 40.000đ/kg — đủ tái sản xuất tối thiểu",
       },
       {
         subject: "Thương lái",
         benefit: "Lợi nhuận từ trung gian",
-        expression: "48.000đ/kg — hưởng lợi từ chênh lệch thông tin",
+        expression: "Hưởng chênh lệch giữa giá mua và giá bán",
       },
       {
         subject: "Nhà rang xay",
         benefit: "Lợi nhuận từ chế biến",
-        expression: "62.000đ/kg — giá trị gia tăng qua kỹ thuật",
+        expression: "Tạo giá trị gia tăng qua kỹ thuật rang xay",
       },
       {
         subject: "Highlands Coffee",
         benefit: "Lợi nhuận từ thương hiệu",
-        expression: "85.000đ/ly — chiếm 64,7% tổng lợi nhuận chuỗi",
+        expression: "Bán 85.000đ/ly — nhận phần lớn nhất chuỗi",
       },
     ],
     nature: {
-      title: "II. Bản chất của lợi ích kinh tế",
+      title: "II. Bản chất và biểu hiện",
       quote:
         'Ph. Ăngghen chỉ rõ: "những quan hệ kinh tế của một xã hội nhất định biểu hiện trước hết dưới hình thái lợi ích".',
       paragraphs: [
@@ -105,7 +105,7 @@ export const presentationData = {
       {
         title: "Là cơ sở phát triển các lợi ích khác",
         desc:
-          'C. Mác khẳng định: "Cội nguồn phát triển của xã hội không phải là quá trình nhận thức, mà là các quan hệ của đời sống vật chất, tức là các lợi ích kinh tế". Với anh Khánh, điều này có nghĩa là: thu nhập ổn định thì mới có thể đầu tư giáo dục cho con cái, chăm lo sức khỏe và bảo đảm đời sống gia đình. Nếu thu nhập bấp bênh, toàn bộ các lợi ích khác cũng sẽ bị kéo xuống theo.',
+          'C. Mác khẳng định: "Cội nguồn phát triển của xã hội không phải là quá trình nhận thức, mà là các quan hệ của đời sống vật chất, tức là các lợi ích kinh tế". Với anh Khánh, điều này có nghĩa là: thu nhập ổn định mới có thể đầu tư giáo dục cho con cái; thu nhập ổn định mới có điều kiện chăm lo sức khỏe, y tế; còn khi thu nhập bấp bênh thì toàn bộ các lợi ích khác đều bị kéo xuống theo.',
       },
     ],
     roleQuote:
@@ -119,49 +119,49 @@ export const presentationData = {
     deepDiveIntroApply: "Áp dụng bài toán thực tế:",
   },
   valueChain: {
-    title: "2. Biểu hiện của lợi ích kinh tế",
+    title: "2. Biểu hiện - ai nhận được gì?",
     subtitle:
-      "Mỗi chủ thể nhận lợi ích tương ứng với vai trò của mình. Tuy nhiên, sự phân phối hiện tại chưa phản ánh đúng đóng góp lao động thực tế:",
+      "Mỗi chủ thể nhận lợi ích tương ứng với vai trò của mình. Tuy nhiên, sự phân phối hiện tại không phản ánh đúng đóng góp lao động thực tế:",
     steps: [
       {
         id: 1,
         name: "Nông dân",
-        percent: 9.4,
-        effort: "3–5 năm / vụ",
-        role: "% Lợi nhuận",
-        note: "Nhiều nhất — nhận ít nhất",
+        value: "3-5 năm / vụ",
+        effort: "Rủi ro cao nhất",
+        role: "Lao động đầu tư",
+        note: "Yếu nhất - phụ thuộc thương lái",
       },
       {
         id: 2,
         name: "Thương lái",
-        percent: 9.4,
-        effort: "1–2 ngày / chuyến",
-        role: "% Lợi nhuận",
-        note: "Hưởng lợi từ thông tin",
+        value: "1-2 ngày / chuyến",
+        effort: "Rủi ro trung bình",
+        role: "Lao động đầu tư",
+        note: "Có lợi thế thông tin",
       },
       {
         id: 3,
         name: "Nhà rang xay",
-        percent: 16.5,
-        effort: "2–3 ngày / lô",
-        role: "% Lợi nhuận",
-        note: "Tương đối hợp lý",
+        value: "2-3 ngày / lô",
+        effort: "Rủi ro trung bình",
+        role: "Lao động đầu tư",
+        note: "Tạo giá trị gia tăng thực",
       },
       {
         id: 4,
         name: "Highlands Coffee",
-        percent: 64.7,
-        effort: "Vận hành liên tục",
-        role: "% Lợi nhuận",
-        note: "Ít lao động trực tiếp nhưng nhận nhiều nhất",
+        value: "Vận hành liên tục",
+        effort: "Rủi ro thấp nhất",
+        role: "Lao động đầu tư",
+        note: "Mạnh nhất - kiểm soát thương hiệu",
       },
     ],
     commentary:
-      "Qua đó có thể thấy sự phân phối lợi ích trong chuỗi cà phê đang nghiêng mạnh về các khâu trung gian, chế biến và sở hữu thương hiệu, trong khi người nông dân là chủ thể đầu tiên của chuỗi giá trị lại nhận phần thấp nhất.",
+      "Qua đó có thể thấy người nông dân là chủ thể đầu tiên của chuỗi giá trị nhưng lại ở vị thế yếu nhất. Họ đầu tư lao động dài hạn, chịu rủi ro lớn nhất về giá thế giới, thời tiết và sâu bệnh, nhưng phần lợi ích nhận được vẫn thấp hơn rõ rệt so với các khâu sau.",
     update2024:
-      "Theo Hiệp hội Cà phê - Ca cao Việt Nam (VICOFA), vào tháng 5/2024, giá cà phê nhân xô tại Tây Nguyên đã đạt mức kỷ lục trên 120.000đ/kg do thiếu hụt nguồn cung toàn cầu. Tuy nhiên, dù giá thô tăng, bản chất quan hệ lợi ích vẫn không thay đổi: lợi nhuận bền vững và lớn nhất vẫn nằm ở các khâu chế biến sâu và sở hữu thương hiệu bán lẻ, không phải ở túi tiền của người sản xuất thô.",
+      "Điểm mấu chốt là Highlands ký hợp đồng giá cố định từ trước, qua đó chuyển phần lớn rủi ro biến động giá về phía nông dân. Khi giá thế giới giảm, anh Khánh là người lỗ trước; còn Highlands vẫn có khả năng duy trì lợi nhuận.",
     ending:
-      "Sự chênh lệch này cho thấy lợi ích kinh tế không chỉ phụ thuộc vào công sức lao động, mà còn phụ thuộc vào vị thế, quyền lực thị trường và khả năng kiểm soát các khâu có giá trị gia tăng cao.",
+      "Sự chênh lệch này cho thấy lợi ích kinh tế không chỉ phụ thuộc vào công sức lao động, mà còn phụ thuộc vào vị thế của từng chủ thể trong chuỗi và khả năng kiểm soát khâu có giá trị gia tăng cao.",
   },
   causes: {
     title: "3. Các nhân tố ảnh hưởng đến quan hệ lợi ích",

@@ -44,7 +44,7 @@ const ValueChain = () => {
             >
               <div className="flex flex-col h-full justify-between">
                 <div>
-                  <span className="text-5xl font-bold text-[#4A5D23] mb-4 block">{step.percent}%</span>
+                  <span className="text-4xl md:text-5xl font-bold text-[#4A5D23] mb-4 block leading-tight">{step.value}</span>
                   <h3 className="text-2xl font-bold text-[#2C1E16] mb-2">{step.name}</h3>
                   <p className="text-[#8B4513] text-lg uppercase tracking-widest mb-4 font-bold">{step.role}</p>
                 </div>
