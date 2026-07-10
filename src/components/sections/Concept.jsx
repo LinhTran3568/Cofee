@@ -11,9 +11,6 @@ const Concept = () => {
     actorsIntro,
     actors,
     nature,
-    roleTitle,
-    roles,
-    roleQuote,
   } = presentationData.concept;
 
   return (
@@ -96,25 +93,6 @@ const Concept = () => {
         </div>
       </motion.div>
 
-      <motion.div 
-        initial={{ y: 50, opacity: 0, scale: 0.9 }}
-        whileInView={{ y: 0, opacity: 1, scale: 1 }}
-        viewport={{ once: false, amount: 0.2 }}
-        transition={{ duration: 1, delay: 0.2 }}
-        className="glass-panel-light p-8 rounded-2xl max-w-7xl w-full text-center"
-      >
-        <h3 className="text-3xl font-bold text-[#4A5D23] mb-6 border-b border-[#4A5D23]/20 pb-4">{roleTitle}</h3>
-        <div className="space-y-6">
-          {roles.map((role, idx) => (
-            <p key={idx} className="text-xl md:text-2xl text-[#2C1E16] font-medium leading-relaxed">
-              <span className="text-[#8B4513] font-bold">{role.title}:</span> {role.desc}
-            </p>
-          ))}
-          <div className="rounded-2xl border-l-4 border-[#4A5D23] bg-white/45 px-5 py-4">
-            <p className="text-xl md:text-2xl text-[#2C1E16] font-medium italic leading-relaxed">{roleQuote}</p>
-          </div>
-        </div>
-      </motion.div>
     </section>
   );
 };

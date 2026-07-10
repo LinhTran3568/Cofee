@@ -8,6 +8,7 @@ import Hero from './components/sections/Hero';
 import Story from './components/sections/Story';
 import Concept from './components/sections/Concept';
 import ValueChain from './components/sections/ValueChain';
+import Role from './components/sections/Role';
 import Causes from './components/sections/Causes';
 import StateRole from './components/sections/StateRole';
 import Conclusion from './components/sections/Conclusion';
@@ -18,6 +19,7 @@ function App() {
     { id: 'story', component: <Story /> },
     { id: 'concept', component: <Concept /> },
     { id: 'valuechain', component: <ValueChain /> },
+    { id: 'role', component: <Role /> },
     { id: 'causes', component: <Causes /> },
     { id: 'state', component: <StateRole /> },
     { id: 'conclusion', component: <Conclusion /> },
