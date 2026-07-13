@@ -6,6 +6,7 @@ const Causes = () => {
   const { deepDiveTitle, deepDiveSubtitle, deepDiveIntroTitle, deepDiveIntroTheory, deepDiveIntroApply, dimensions, relations } =
     presentationData.concept;
   const { title, subtitle, items } = presentationData.causes;
+  const conflictParts = relations.conflict.split('\n\n');
 
   return (
     <section className="min-h-screen py-32 px-8 lg:px-24 relative z-10 flex flex-col justify-center items-center text-center">
@@ -23,7 +24,7 @@ const Causes = () => {
         <p className="text-xl md:text-2xl text-[#5C4033] font-medium">{deepDiveIntroApply}</p>
       </motion.div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl w-full mb-12">
+      <div className="grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-8 max-w-7xl w-full mb-12 items-start">
         <div className="space-y-8">
           {dimensions.map((dim, idx) => (
             <motion.div
@@ -45,20 +46,30 @@ const Causes = () => {
           whileInView={{ x: 0, opacity: 1, scale: 1 }}
           viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="glass-panel-light p-8 rounded-2xl text-center"
+          className="glass-panel-light p-6 md:p-7 rounded-2xl text-center"
         >
-          <h3 className="text-3xl font-bold text-[#8B4513] mb-6 border-b border-[#8B4513]/20 pb-4">2. Sự thống nhất và mâu thuẫn</h3>
-          <div className="space-y-6">
-            <p className="text-xl md:text-2xl text-[#5C4033] leading-relaxed">{relations.theory}</p>
-            <p className="text-xl md:text-2xl text-[#2C1E16] font-medium leading-relaxed">
-              <span className="text-[#4A5D23] font-bold block mb-2">Tính thống nhất:</span>
+          <h3 className="text-2xl md:text-3xl font-bold text-[#8B4513] mb-4 border-b border-[#8B4513]/20 pb-3">2. Sự thống nhất và mâu thuẫn</h3>
+          <div className="space-y-4">
+            <div className="rounded-2xl bg-white/35 border border-white/50 px-5 py-4">
+              <span className="text-[#4A5D23] text-xl md:text-2xl font-bold block mb-2 font-serif">Tính thống nhất:</span>
+              <p className="text-lg md:text-xl text-[#2C1E16] font-medium leading-relaxed">
               {relations.unity}
-            </p>
-            <div className="h-[1px] w-full bg-[#2C1E16]/10"></div>
-            <p className="text-xl md:text-2xl text-[#2C1E16] font-medium leading-relaxed">
-              <span className="text-[#8B4513] font-bold block mb-2">Tính mâu thuẫn:</span>
-              {relations.conflict}
-            </p>
+              </p>
+            </div>
+            <div className="rounded-2xl bg-white/35 border border-white/50 px-5 py-4">
+              <span className="text-[#8B4513] text-xl md:text-2xl font-bold block mb-3 font-serif">Tính mâu thuẫn:</span>
+              <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 text-left">
+                {conflictParts.map((part) => {
+                  const [label, ...content] = part.split(': ');
+                  return (
+                    <p key={label} className="rounded-xl bg-white/55 border border-white/60 p-4 text-base md:text-lg text-[#2C1E16] font-medium leading-relaxed">
+                      <span className="block text-[#8B4513] font-bold mb-1">{label}:</span>
+                      {content.join(': ')}
+                    </p>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>

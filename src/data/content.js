@@ -93,7 +93,7 @@ export const presentationData = {
       unity:
         "Anh Khánh cần Highlands để tiêu thụ sản phẩm; Highlands cần anh Khánh để có nguồn nguyên liệu đầu vào. Nếu một bên gặp sự cố, bên kia cũng sẽ bị ảnh hưởng trực tiếp.",
       conflict:
-        "Anh Khánh bán cà phê nhân với giá 40.000đ/kg, trong khi Highlands bán ra 85.000đ/ly. Một kg cà phê có thể pha được khoảng 40-50 ly, tạo ra doanh thu rất lớn, nhưng người nông dân chỉ nhận được phần nhỏ nhất trong tổng giá trị. Biểu hiện mâu thuẫn là doanh nghiệp có thể ký hợp đồng giá cố định để bảo đảm lợi nhuận, trong khi khi giá thế giới giảm, người nông dân phải chịu lỗ trực tiếp.",
+        'Số liệu thực tế: Anh Khánh bán cà phê nhân với giá 40.000đ/kg, trong khi Highland bán ra 85.000đ/ly. Một kg cà phê pha được khoảng 40-50 ly, tạo ra doanh thu hàng triệu đồng. Người nông dân chỉ nhận được phần nhỏ nhất trong tổng giá trị.\n\nBiểu hiện mâu thuẫn: Các doanh nghiệp trong chuỗi cung ứng như Highland thường ký hợp đồng cung ứng dài hạn hoặc áp dụng các cơ chế quản trị rủi ro về giá với nhà cung cấp để giảm tác động của biến động giá nguyên liệu. Khi giá thế giới giảm, anh Khánh phải chịu lỗ trực tiếp, trong khi Highland vẫn duy trì được lãi. Đây là mâu thuẫn điển hình khi các chủ thể tối ưu hóa lợi ích riêng bằng những phương thức đối lập.',
     },
     roleTitle: "III. Vai trò của lợi ích kinh tế",
     roles: [
