@@ -211,24 +211,24 @@ export const presentationData = {
       "Về lâu dài, Nhà nước cần đầu tư hạ tầng logistics và chuyển giao công nghệ chế biến sâu tại Đắk Lắk để nông dân có thể tham gia vào những khâu có giá trị gia tăng cao hơn.",
     ],
     preventive: {
-      title: "4. Kiểm soát, ngăn ngừa các tác động tiêu cực",
+      title: "4. Kiểm soát, ngăn ngừa các tác động tiêu cực đối với sự phát triển xã hội",
       desc:
-        "Nhà nước cần kiểm soát và ngăn ngừa các quan hệ lợi ích có ảnh hưởng tiêu cực đến sự phát triển xã hội. Để hạn chế tình trạng ép giá và chèn ép người yếu thế, có thể triển khai ba biện pháp cụ thể sau:",
+        "Lý thuyết\nLợi ích kinh tế là kết quả trực tiếp của quá trình phân phối thu nhập. Nếu để thị trường tự điều tiết hoàn toàn, việc theo đuổi lợi ích cá nhân có thể dẫn đến tình trạng chèn ép, bóc lột, làm tổn hại đến lợi ích chung của xã hội. Vì vậy, các cơ quan công quyền cùng đội ngũ cán bộ, công chức nhà nước cần thực hiện chức năng giám sát và kiểm tra nhằm ngăn chặn các hình thức thu nhập bất hợp pháp, tình trạng lạm quyền, đồng thời bảo vệ quyền và lợi ích của những nhóm yếu thế trong xã hội.",
       items: [
         {
-          title: "Minh bạch thông tin giá",
+          title: "Minh bạch thông tin giá cả",
           desc:
-            "Nhà nước cần đẩy mạnh hoạt động của sàn giao dịch cà phê và các công cụ cập nhật giá thị trường thế giới theo thời gian thực. Khi nông dân nắm được giá thực tế, thương lái sẽ khó lợi dụng chênh lệch thông tin để ép giá.",
+            "Đẩy mạnh hoạt động của Sàn giao dịch cà phê Buôn Ma Thuột (BCEC).\nKết hợp các ứng dụng cập nhật giá cà phê thế giới (ICE London) theo thời gian thực.\nKhi anh Khánh nắm được mức giá thị trường chính xác, thương lái sẽ không còn lợi thế trong việc che giấu thông tin để ép giá.",
         },
         {
-          title: "Gia tăng giá trị qua chứng nhận quốc tế",
+          title: "Gia tăng giá trị thông qua các chứng nhận quốc tế",
           desc:
-            "Nhà nước có thể hỗ trợ các hợp tác xã đạt chuẩn Fair Trade hoặc 4C để nâng giá trị sản phẩm và tạo thêm phần thu nhập trực tiếp cho nông dân.",
+            "Hỗ trợ các hợp tác xã đạt các chứng nhận như Fair Trade và 4C.\nKhi có các chứng nhận này, người mua quốc tế sẵn sàng trả thêm khoản premium từ 200-300 USD/tấn.\nĐây là cơ chế giúp tăng trực tiếp thu nhập cho người sản xuất, góp phần hạn chế tình trạng bóc lột trong chuỗi giá trị.",
         },
         {
           title: "Hỗ trợ nền tảng sản xuất",
           desc:
-            "Thông qua các chương trình tái canh cà phê, Nhà nước có thể hỗ trợ vốn và kỹ thuật để thay vườn già cỗi, giảm giá thành, tăng năng suất và cải thiện biên lợi nhuận cho nông dân.",
+            "Triển khai các chính sách vĩ mô như Đề án tái canh cà phê.\nHỗ trợ vốn, kỹ thuật và giống cây trồng để giảm chi phí sản xuất.\nQua đó giúp nông dân mở rộng biên lợi nhuận và nâng cao khả năng chống chịu trước biến động của thị trường.",
         },
       ],
     },

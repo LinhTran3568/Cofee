@@ -17,6 +17,8 @@ const StateRole = () => {
     resolution,
   } = presentationData.stateRole;
 
+  const [preventiveLabel, ...preventiveParagraphs] = preventive.desc.split('\n');
+
   return (
     <section className="min-h-screen py-32 px-8 lg:px-24 relative z-10 flex flex-col justify-center items-center text-center">
       <div className="flex flex-col lg:flex-row gap-12 mb-16 items-start max-w-7xl mx-auto w-full">
@@ -84,12 +86,26 @@ const StateRole = () => {
 
       <div className="flex flex-col gap-12 max-w-7xl w-full">
         {/* Preventive Measures */}
-        <div className="w-full space-y-8 glass-panel-light p-8 md:p-12 rounded-3xl text-center">
-          <div className="border-b border-[#4A5D23]/30 pb-6 mb-8">
-            <h3 className="text-3xl md:text-4xl font-bold text-[#4A5D23] mb-4">{preventive.title}</h3>
-            <p className="text-xl md:text-2xl text-[#5C4033] font-medium italic max-w-4xl mx-auto">{preventive.desc}</p>
+        <div className="w-full space-y-8">
+          <div className="max-w-7xl mx-auto w-full">
+            <div className="glass-panel-light rounded-[2rem] px-10 py-8 md:px-14 md:py-10 lg:px-16 text-center md:text-left">
+              <h3 className="text-3xl md:text-4xl font-bold text-[#4A5D23] leading-tight mb-5">
+                {preventive.title}
+              </h3>
+              <div className="space-y-4">
+                {preventiveParagraphs.map((paragraph) => (
+                  <p
+                    key={paragraph}
+                    className="text-xl md:text-2xl text-[#5C4033] font-medium leading-relaxed"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {preventive.items.map((item, index) => (
               <motion.div
                 key={index}
@@ -97,13 +113,26 @@ const StateRole = () => {
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: false, amount: 0.2 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
-                className="group flex flex-col items-center bg-white/40 p-8 rounded-2xl border border-[#4A5D23]/10 hover:-translate-y-2 transition-transform duration-300"
+                className="group flex flex-col glass-panel-light p-7 md:p-8 rounded-[1.75rem] border border-[#4A5D23]/10 hover:-translate-y-2 transition-transform duration-300 text-center"
               >
-                <div className="flex flex-col items-center gap-4 mb-4">
-                  <span className="text-[#8B4513] text-4xl font-bold">0{index + 1}.</span>
-                  <h4 className="text-2xl font-bold text-[#2C1E16]">{item.title}</h4>
+                <div className="flex flex-col items-center gap-4 mb-5">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#8B4513]/10 text-[#8B4513] text-xl font-bold">
+                    0{index + 1}
+                  </span>
+                  <h4 className="text-2xl font-bold text-[#2C1E16] leading-snug">
+                    {item.title}
+                  </h4>
                 </div>
-                <p className="text-lg md:text-xl text-[#5C4033] font-medium leading-relaxed">{item.desc}</p>
+                <div className="space-y-3">
+                  {item.desc.split('\n').map((line) => (
+                    <p
+                      key={line}
+                      className="text-lg md:text-xl text-[#5C4033] font-medium leading-relaxed"
+                    >
+                      {line}
+                    </p>
+                  ))}
+                </div>
               </motion.div>
             ))}
           </div>
